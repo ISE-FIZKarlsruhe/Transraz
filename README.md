@@ -1,11 +1,11 @@
-# Transraz
+# TRANSRAZ
 
 [TRANSRAZ](https://www.fiz-karlsruhe.de/en/forschung/transraz) is an ongoing research project aiming at connecting heterogeneous historical data collections to an architectural 3D virtual research environment (VRE) using KGs. 
 The overall goal is to enable the exploration of the historic city of Nuremberg in different time periods ranging from the Middle Ages to the 21st century.
 
-##Nuremberg Address Knowledge Graph
+## Nuremberg Address Knowledge Graph
 
-This repository contains esources of an ongoing work introduced by the poster paper:
+This repository contains resources of ongoing work introduced by the poster paper:
 ```
 Oleksandra Bruns, Tabea Tietz, Mehdi Ben Chaabane, Manuel Portz, Felix Xiong, Harald Sack (2021). 
 The Nuremberg Address Knowledge Graph. Submitted to ESWC 2021 Poster&Demos.
@@ -18,6 +18,17 @@ The research of European history cross various time layers gives insights about 
 
 - The NA-KG can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/NA-KG.ttl)
 - Example queries can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/SPARQL_Queries/Queries.md)
+
+## Prior Publications about TOPORAZ and TOPORAZ
+```
+Tabea Tietz, Oleksandra Bruns, Sandra Göller, Matthias Razum, Danilo Dessi, Harald Sack. 
+Knowledge Graph enabled Curation and Exploration of Nuremberg’s city heritage [to be published]. 
+In:Proc. of the Conf. on Digital Curation Technologies. CEUR-WS (2021)
+
+Matthias Razum, Sandra Göller, Harald Sack, Tabea Tietz, Oleksandra Vsesviatska, Gerhard Weilandt, Marc Grellert, Torben Scharm. 
+Toporaz: Ein digitales Raum-Zeit-Modell für vernetzte Forschungam Beispiel Nürnberg. 
+Information-Wissenschaft & Praxis71(4), 185–194 (2020)
+```
 
 ## Acknowledgement 
 This work is funded by the Leibniz Association under project number SAW-2020-FIZ KA-4-Transraz. 
