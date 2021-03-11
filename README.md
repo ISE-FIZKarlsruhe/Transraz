@@ -1,6 +1,6 @@
 # Transraz
 
-TRANSRAZ is a research project in which heterogeneous historical data collections are connected to an architectural 3D virtual research environment (VRE) of the city of Nuremberg using knowledge graphs. The goal is to enable the exploration of Nuremberg in different time periods ranging from the Middle Ages to the 21st century.
+[TRANSRAZ](https://www.fiz-karlsruhe.de/en/forschung/transraz) is a research project in which heterogeneous historical data collections are connected to an architectural 3D virtual research environment (VRE) of the city of Nuremberg using knowledge graphs. The goal is to enable the exploration of Nuremberg in different time periods ranging from the Middle Ages to the 21st century.
 
 ## Acknowledgement
 
