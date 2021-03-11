@@ -1,3 +1,15 @@
+```
+PREFIX : <http://transraz/addressbook#> 
+PREFIX dbo: <http://www.dbpedia.org/ontology/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX schema: <http://schema.org/> 
+PREFIX transraz: <http://transraz/addressbook/> 
+```
+
 1. How many persons had the civil rights?
 
 ```
