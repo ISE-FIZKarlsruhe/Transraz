@@ -7,8 +7,9 @@ The overall goal is to enable the exploration of the historic city of Nuremberg 
 
 This repository contains resources of ongoing work introduced by the poster paper:
 ```
-Oleksandra Bruns, Tabea Tietz, Mehdi Ben Chaabane, Manuel Portz, Felix Xiong, Harald Sack (2021). 
-The Nuremberg Address Knowledge Graph. Submitted to ESWC 2021 Poster&Demos.
+Oleksandra Bruns, Tabea Tietz, Mehdi Ben Chaabane, Manuel Portz, Felix Xiong, Harald Sack. 
+The Nuremberg Address Knowledge Graph. 
+Submitted to ESWC 2021 Poster&Demos.
 ```
 ### Abstract
 
@@ -16,7 +17,7 @@ The research of European history cross various time layers gives insights about 
 
 ### Access
 
-- The NA-KG can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/NA-KG.ttl)
+- The Nuremberg Address Knowledge Graph (NA-KG) can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/NA-KG.ttl)
 - Example queries can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/SPARQL_Queries/Queries.md)
 
 ## Prior Publications about TOPORAZ and TOPORAZ
