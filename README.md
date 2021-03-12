@@ -20,7 +20,7 @@ The research of European history cross various time layers gives insights about 
 - The Nuremberg Address Knowledge Graph (NA-KG) can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/NA-KG.ttl)
 - Example queries can be accessed [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/NurembergAddressKG/SPARQL_Queries/Queries.md)
 
-## Prior Publications about TOPORAZ and TOPORAZ
+## Prior Publications about TOPORAZ and TRANSRAZ
 ```
 Tabea Tietz, Oleksandra Bruns, Sandra Göller, Matthias Razum, Danilo Dessi, Harald Sack. 
 Knowledge Graph enabled Curation and Exploration of Nuremberg’s city heritage [to be published]. 
