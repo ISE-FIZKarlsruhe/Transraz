@@ -5,7 +5,7 @@ The overall goal is to enable the exploration of the historic city of Nuremberg 
 
 ## Nuremberg Address Knowledge Graph
 
-This repository contains resources of ongoing work introduced by the poster paper:
+This repository contains resources of ongoing work introduced in the poster paper:
 ```
 Oleksandra Bruns, Tabea Tietz, Mehdi Ben Chaabane, Manuel Portz, Felix Xiong, Harald Sack. 
 The Nuremberg Address Knowledge Graph. 
