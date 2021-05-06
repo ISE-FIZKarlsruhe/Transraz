@@ -1,3 +1,5 @@
+remote_theme: aksakalli/jekyll-doc-theme@gh-pages
+
 # Site settings
 title: Jekyll Doc Theme
 email: your-email@domain.com
