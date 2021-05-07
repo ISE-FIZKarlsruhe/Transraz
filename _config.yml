@@ -1,7 +1,7 @@
 #remote_theme: aksakalli/jekyll-doc-theme@gh-pages
 
 # Site settings
-title: Jekyll Doc Theme
+title: TRANSRAZ
 email: your-email@domain.com
 description: >
   Jekyll Template for Project Websites
@@ -9,8 +9,8 @@ description: >
 lang: en-US
 
 baseurl: "/Transraz" # the subpath of your site, e.g. /blog/
-url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
-git_address: https://github.com/aksakalli/jekyll-doc-theme
+url: https://ise-fizkarlsruhe.github.io/Transraz/ # the base hostname & protocol for your site
+git_address: https://github.com/ISE-FIZKarlsruhe/Transraz/
 git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
 
 # theme options from https://bootswatch.com/3/
