@@ -10,6 +10,8 @@
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
+  background-color: #34495e;
+  color: rgba(236, 240, 241)
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -19,6 +21,9 @@
   white-space: nowrap;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
+  
+
+}
 
   &,
   &:active,
