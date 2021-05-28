@@ -18,7 +18,7 @@ html {
   
   .header-container {
     background-color: black;
-    background:linear-gradient(0deg, rgba(236, 240, 241,0.5), rgba(236, 240, 241,0.5)), url('../img/nuremberg.jpg');
+    background:url('../img/nuremberg.jpg') rgba(236, 240, 241,0.7));
     background-size:cover;
     background-blend-mode: multiply;
   
