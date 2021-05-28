@@ -56,7 +56,7 @@ layout: default
             <img src="{{ "/assets/img/NAKG_wf.png" | relative_url }}" alt="NA-KG workflow" class="img-responsive">
         </div>
     </div>
-<hr class="hrcustom">
+    <hr class="hrcustom">
 </div>
 <div class="container">
     <div class="row">
@@ -66,6 +66,23 @@ layout: default
         </div>
         <div class="col-md-6 text-center">
             <img src="{{ "/assets/img/citysquare.jpg" | relative_url }}" alt="NA-KG example Address Book" class="img-responsive">
+        </div>
+    </div>
+<hr class="hrcustom">
+</div>
+<div class="container">
+    <div class="row">
+        <div>
+            <h2 class="header-light regular-pad">Querying NA-KG</h2>
+            <pre><code>
+            SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
+            WHERE {
+                ?resource schema:contributor ?contributor .
+                ?resource rdfs:label ?label .
+                ?contributor rdfs:label ?name .
+                OPTIONAL {?resource schema:genre ?genre }
+                }
+            </code></pre>
         </div>
     </div>
 <hr class="hrcustom">
