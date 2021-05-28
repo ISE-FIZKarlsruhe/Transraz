@@ -73,8 +73,9 @@ layout: default
 <div class="container">
     <div class="row">
         <h2 class="header-light regular-pad">Querying NA-KG</h2>
-        <div class="col-md-6">
         <div>
+            <h3>Example 1</h3>
+            <p class="lead">Example explanation</p>
             <pre><code>
             SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
             WHERE {
@@ -85,8 +86,18 @@ layout: default
                 }
             </code></pre>
         </div>
-        <div class="col-md-6">
+        <div>
+            <h3>Example 1</h3>
             <p class="lead">Example explanation</p>
+            <pre><code>
+            SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
+            WHERE {
+                ?resource schema:contributor ?contributor .
+                ?resource rdfs:label ?label .
+                ?contributor rdfs:label ?name .
+                OPTIONAL {?resource schema:genre ?genre }
+                }
+            </code></pre>
         </div>
     </div>
 <hr class="hrcustom">
