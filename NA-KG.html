@@ -72,8 +72,9 @@ layout: default
 </div>
 <div class="container">
     <div class="row">
+        <h2 class="header-light regular-pad">Querying NA-KG</h2>
+        <div class="col-md-6">
         <div>
-            <h2 class="header-light regular-pad">Querying NA-KG</h2>
             <pre><code>
             SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
             WHERE {
@@ -83,6 +84,9 @@ layout: default
                 OPTIONAL {?resource schema:genre ?genre }
                 }
             </code></pre>
+        </div>
+        <div class="col-md-6">
+            <p class="lead">Example explanation</p>
         </div>
     </div>
 <hr class="hrcustom">
