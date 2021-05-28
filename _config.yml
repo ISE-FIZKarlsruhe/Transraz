@@ -2,10 +2,9 @@
 
 # Site settings
 title: TRANSRAZ
-email: your-email@domain.com
+email: tabea.tietz@kit.edu
 description: >
-  Jekyll Template for Project Websites
-  providing documentation and blog post pages.
+  TRANSRAZ Project Website
 lang: en-US
 
 baseurl: "/Transraz" # the subpath of your site, e.g. /blog/
