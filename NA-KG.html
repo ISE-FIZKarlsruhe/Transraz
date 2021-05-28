@@ -67,9 +67,11 @@ layout: default
 </div>
 <div class="container">
     <div class="row">
-        <h2 class="header-light regular-pad">Use Case - TRANSRAZ</h2>
+        <h2 class="header-light regular-pad">Exploration</h2>
         <div class="col-md-6">
-              <p class="lead" align="justify">Within the TRANSRAZ research project, Nuremberg and the development of its architecture and culture is recreated from the 17th to the 21st century. It will be available for researchers and the public by means of an interactive 3D environment. Goal of this poster paper is to discuss the ongoing work of connecting heterogeneous historical data from sources previously hidden in archives to the 3D model using knowledge graphs for a scientifically accurate exploration of Nuremberg. The contribution of this paper is the Nuremberg Address Knowledge Graph (NA-KG) which contains information of people and organizations in Nuremberg from unstructured data of Nuremberg address books.</p>
+              <p class="lead" align="justify">The exploration of historical data in the NA-KG is of great value for historical scientists and digital humanists intending to study the developments of the city and life of its residents in the beginning of the 20th century. 
+For example, the existing KG is able to answer what was the ratio of persons with civil rights to persons without civil rights. And based on this information to analyse what persons in higher social class did for living and where they lived. The historians also may draw statistics like what was the most common profession/name in 1910, what was the central business district of Nuremberg, where did most of the artists live, what district offered public education? Thus, the provided address book data allows to explore not only the whereabouts of Nuremberg inhabitants but also their social status, family relations and business developments.
+</p>
         </div>
         <div class="col-md-6 text-center">
             <img src="{{ "/assets/img/citysquare.jpg" | relative_url }}" alt="NA-KG example Address Book" class="img-responsive">
@@ -80,37 +82,62 @@ layout: default
 <div class="container">
     <div class="row">
         <h2 class="header-light regular-pad">Querying NA-KG</h2>
+        <p class="lead" align="justify">The NA-KG is available for <a href="https://github.com/ISE-FIZKarlsruhe/Transraz/raw/main/NurembergAddressKG/NA-KG.ttl">download</a>. Query it using the following prefixes:</p>
+        <pre><code>
+PREFIX transraz: <http://transraz/>
+PREFIX ab: <http://transraz/addressbook#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://www.dbpedia.org/ontology/>
+
+            </code></pre>
             <h4>Example 1</h4>
         <div class="col-md-6">
-            <p class="lead" align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum diam ut tellus vestibulum pharetra. Nam mi justo, semper ut egestas eget, pharetra a nibh. Vivamus fermentum et ex ut tristique. Praesent ultricies accumsan tincidunt. Donec nec nulla interdum, sodales libero blandit, sodales elit. Donec quis commodo nunc, sit amet finibus lorem. Nulla nec tortor risus. Proin in pretium mauris, quis vestibulum eros. Quisque et libero lacus. </p>
+            <p class="lead" align="justify">Count the number of citizens who were granted civil rights.</p>
         </div>
 
         <div class="col-md-6">
             <pre><code>
-SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
-WHERE {
-    ?resource schema:contributor ?contributor .
-    ?resource rdfs:label ?label .
-    ?contributor rdfs:label ?name .
-    OPTIONAL {?resource schema:genre ?genre }
-}
+SELECT ?civilRight (COUNT(?civilRights) as ?counter_cvR)
+    WHERE { ?Individual rdf:type vcard:Individual   ;
+                    transraz:civilRights ?civilRights   . }
+    GROUP BY ?civilRights
+    ORDER BY DESC (?counter_cvR)
+
             </code></pre>
         </div>
 
             <h4>Example 2</h4>
         <div class="col-md-6">
-            <p class="lead" align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum diam ut tellus vestibulum pharetra. Nam mi justo, semper ut egestas eget, pharetra a nibh. Vivamus fermentum et ex ut tristique. Praesent ultricies accumsan tincidunt. Donec nec nulla interdum, sodales libero blandit, sodales elit. Donec quis commodo nunc, sit amet finibus lorem. Nulla nec tortor risus. Proin in pretium mauris, quis vestibulum eros. Quisque et libero lacus. </p>
+            <p class="lead" align="justify">Count the frequency of each occupation mentioned in the address book.
+            </p>
         </div>
 
         <div class="col-md-6">
             <pre><code>
-SELECT DISTINCT ?resource ?label ?contributor ?name ?genre
-WHERE {
-    ?resource schema:contributor ?contributor .
-    ?resource rdfs:label ?label .
-    ?contributor rdfs:label ?name .
-    OPTIONAL {?resource schema:genre ?genre }
-}
+SELECT ?name (COUNT(?name) as ?frequency)
+    WHERE { ?Individual schema:hasOccupation ?Occupation    .
+            ?Occupation rdfs:label ?name    .}
+    GROUP BY ?name
+    ORDER BY DESC (?frequency)
+            </code></pre>
+        </div>
+        <h4>Example 3</h4>
+        <div class="col-md-6">
+            <p class="lead" align="justify">Count the number of companies for each street in Nuremberg.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <pre><code>
+SELECT ?Streetname (COUNT(?Streetname) as ?frequency)
+   WHERE {?Organization rdf:type vcard:Organization    ;
+                         vcard:hasAddress ?AddressID    .
+           ?AddressID vcard:hasStreetAddress ?Street    .
+           ?Street rdfs:label ?Streetname   . }
+   GROUP BY ?Streetname
+   ORDER BY DESC(?frequency)
             </code></pre>
         </div>
     </div>
@@ -120,7 +147,9 @@ WHERE {
     <div class="row">
         <div id="authors">
             <h2 class="header-light regular-pad">About the Authors</h2>
-              <p class="lead">Who made this?</p>
+              <p class="lead" align="justify"> 
+
+                <br> This  work  is  funded  by  the  Leibniz  Association  under project number AW-2020-FIZ KA-4-Transraz</p>
         </div>
     </div>
     <hr class="hrcustom">
