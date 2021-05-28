@@ -18,7 +18,9 @@ html {
   
   .header-container {
     background-color: black;
-    background: url('../img/nuremberg.jpg') no-repeat 70% 0;
+    background: url('../img/nuremberg.jpg') rgba(236, 240, 241, 0.3);
+    background-size:cover;
+    background-blend-mode: multiply;
     color: #fff;
   
     h1 {
