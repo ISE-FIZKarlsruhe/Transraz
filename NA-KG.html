@@ -59,7 +59,7 @@ layout: default
               To normalize orthographic errors committed during creation of the address book, mistakes produced by the OCR, as well as to resolute the abbreviations in street names the existing reference vocabularies (e.g. <a href="https://offenedaten-koeln.de/dataset/vornamen">first names of Cologne</a>, <a href="https://hausbuecher.nuernberg.de/index.php?do=page&mo=5">Books of Nuremberg’s Twelve Brothers</a>, <a href="https://de.wikipedia.org/wiki/Kategorie:Historischer_Beruf">historical occupation list form Wikipedia</a>) and lookup matching of potential candidates in the lexicon for correction, based on the Levenshtein distance were used. 
               The extracted data was used to populate the NA-KG, which builds upon <a href="https://www.w3.org/OWL/">OWL</a>, <a href="https://www.w3.org/TR/vcard-rdf/">VCARD</a>,  <a href="http://xmlns.com/foaf/spec/">FOAF</a>, <a href="https://schema.org/">SCHEMA</a> and <a href="https://www.dbpedia.org/">DBPEDIA</a>. It contains 5 classes, e.g., <code>vcard:Address</code> and <code>schema:Organization</code>, 6 object properties,  e.g. <code>dbo:owningOrganization</code> and <code>vcard:hasAddress</code>, and  10  datatype properties, e.g., <code>vcard:organization-name</code> and <code>vcard:given-name</code>.  The NA-KG includes 860K RDF triples based on 165K entities that were extracted from the address book. It consists of structured data about 1403 historical companies and 67K residents of Nuremberg.</p> 
              
-            <img src="{{ "/assets/img/NAKG_wf.png" | relative_url }}" alt="NA-KG workflow" class="mx-auto rounded-circle">
+            <img src="{{ "/assets/img/NAKG_wf.png" | relative_url }}" alt="NA-KG workflow" class="img-responsive">
         </div>
     </div>
     <hr class="hrcustom">
@@ -83,7 +83,9 @@ For example, the existing KG is able to answer what was the ratio of persons wit
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="https://github.com/ISE-FIZKarlsruhe/Transraz/raw/main/NurembergAddressKG/NA-KG.ttl" role="button">Download NA-KG</a>
             <a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/1ddCYdoGP2FYhxTqZ12tQxw1aBTh1LmyY/view?usp=sharing" role="button">Execute Queries using Google Collab</a>
-            <br> Query it using the following prefixes:</p>
+            <br> <br>
+
+        Query NA-KG using the following prefixes:</p>
         
 <code>PREFIX transraz: &lt;http://transraz/&gt; </code> <br>
 <code>PREFIX ab: &lt;http://transraz/addressbook#&gt; </code> <br>
