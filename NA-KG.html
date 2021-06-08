@@ -76,11 +76,10 @@ For example, the existing KG is able to answer what was the ratio of persons wit
             <img src="{{ "/assets/img/citysquare.jpg" | relative_url }}" alt="NA-KG example Address Book" class="img-responsive">
         </div>
     </div>
-<hr class="hrcustom">
 </div>
 <div class="container">
     <div class="row">
-        <h2 class="header-light regular-pad">Querying NA-KG</h2>
+        <h3 class="header-light regular-pad">Querying NA-KG</h3>
         <p class="lead" align="justify">The NA-KG is available for <a href="https://github.com/ISE-FIZKarlsruhe/Transraz/raw/main/NurembergAddressKG/NA-KG.ttl">download</a>. Query it using the following prefixes:</p>
         
 <code>PREFIX transraz: &lt;http://transraz/&gt; </code> <br>
@@ -102,7 +101,6 @@ SELECT ?civilRight (COUNT(?civilRights) as ?counter_cvR)
                     transraz:civilRights ?civilRights   . }
     GROUP BY ?civilRights
     ORDER BY DESC (?counter_cvR)
-
             </code></pre>
         </div>
 
@@ -176,4 +174,13 @@ SELECT ?Streetname (COUNT(?Streetname) as ?frequency)
     }
             </code></pre>
         </div>
+    </div>
+    <hr>
+    <div class="row">
+    <div class="container">
+                <div class="row align-items-center">
+                     <img src="/assets/img/logos.png" alt="..." class="center">
+                    
+                </div>
+            </div>
     </div>
