@@ -55,9 +55,7 @@ layout: default
     <div class="row">
         <div>
             <h2 class="header-light regular-pad">Workflow</h2>
-              <p class="lead" align="justify">The scanned images of the address book were first transformed into plain text via the OCR system. Based on the syntactic structure of the text, the noisy OCR output was then first segmented into person and company entries, and then into the individual entry components via developing a set of regular expressions. The missing information, e.g. omitted last names in case of namesakes and family members, was inserted. 
-              To normalize orthographic errors committed during creation of the address book, mistakes produced by the OCR, as well as to resolute the abbreviations in street names the existing reference vocabularies (e.g. <a href="https://offenedaten-koeln.de/dataset/vornamen">first names of Cologne</a>, <a href="https://hausbuecher.nuernberg.de/index.php?do=page&mo=5">Books of Nuremberg’s Twelve Brothers</a>, <a href="https://de.wikipedia.org/wiki/Kategorie:Historischer_Beruf">historical occupation list form Wikipedia</a>) and lookup matching of potential candidates in the lexicon for correction, based on the Levenshtein distance were used. 
-              The extracted data was used to populate the NA-KG, which builds upon <a href="https://www.w3.org/OWL/">OWL</a>, <a href="https://www.w3.org/TR/vcard-rdf/">VCARD</a>,  <a href="http://xmlns.com/foaf/spec/">FOAF</a>, <a href="https://schema.org/">SCHEMA</a> and <a href="https://www.dbpedia.org/">DBPEDIA</a>. It contains 5 classes, e.g., <code>vcard:Address</code> and <code>schema:Organization</code>, 6 object properties,  e.g. <code>dbo:owningOrganization</code> and <code>vcard:hasAddress</code>, and  10  datatype properties, e.g., <code>vcard:organization-name</code> and <code>vcard:given-name</code>.  The NA-KG includes 860K RDF triples based on 165K entities that were extracted from the address book. It consists of structured data about 1403 historical companies and 67K residents of Nuremberg.</p> 
+              <p class="lead" align="justify">The scanned images of the address book were first transformed into plain text via the OCR system. Based on the syntactic structure of the text, the noisy OCR output was then first segmented into person and company entries, and then into the individual entry components via developing a set of regular expressions. To normalize orthographic errors committed during creation of the address book, errors produced by the OCR, as well as to resolve the abbreviations in street names, existing reference vocabularies were used. The extracted data was used to populate the NA-KG. </p> 
              
             <img src="{{ "/assets/img/NAKG_wf.png" | relative_url }}" alt="NA-KG workflow" class="img-responsive">
         </div>
@@ -116,7 +114,7 @@ SELECT ?civilRights (COUNT(?civilRights) as ?counter_cvR)
         <div class="col-md-6">
             <p class="lead" align="justify"><strong>Query:</strong> Count the frequency of each occupation mentioned in the address book.
                 <br> 
-            Such query analyses data from the address book of Nuremberg 1910 to identify the most common occupations among Nuremberg citizens. This gives the idea on the structure of the labour market in Germany in the beginning of the 20th century. 
+            This query gives the idea on the structure of the labour market in Germany in the beginning of the 20th century. 
             </p>
         </div>
 
@@ -190,7 +188,7 @@ SELECT ?Streetname (COUNT(?Streetname) as ?frequency)
     </div>
     <hr>
     <div class="row">
-    <div class="container">
+    <div class="container text-center">
                 
                     <img src="{{ "/assets/img/logos.png" | relative_url }}" alt="FIZ Karlsruhe and KIT (AIFB)" class="img-responsive" style="padding-bottom: 20px;" width="500" align="center">     
     </div>
