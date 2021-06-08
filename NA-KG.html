@@ -80,7 +80,10 @@ For example, the existing KG is able to answer what was the ratio of persons wit
 <div class="container">
     <div class="row">
         <h3 class="header-light regular-pad">Querying NA-KG</h3>
-        <p class="lead" align="justify">The NA-KG is available for <a href="https://github.com/ISE-FIZKarlsruhe/Transraz/raw/main/NurembergAddressKG/NA-KG.ttl">download</a>. Query it using the following prefixes:</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://github.com/ISE-FIZKarlsruhe/Transraz/raw/main/NurembergAddressKG/NA-KG.ttl" role="button">Download NA-KG</a>
+            <a class="btn btn-primary btn-lg" href="https://drive.google.com/file/d/1ddCYdoGP2FYhxTqZ12tQxw1aBTh1LmyY/view?usp=sharing" role="button">Execute Queries using Google Collab</a>
+            <br> Query it using the following prefixes:</p>
         
 <code>PREFIX transraz: &lt;http://transraz/&gt; </code> <br>
 <code>PREFIX ab: &lt;http://transraz/addressbook#&gt; </code> <br>
@@ -96,7 +99,7 @@ For example, the existing KG is able to answer what was the ratio of persons wit
 
         <div class="col-md-6">
             <pre><code>
-SELECT ?civilRight (COUNT(?civilRights) as ?counter_cvR)
+SELECT ?civilRights (COUNT(?civilRights) as ?counter_cvR)
     WHERE { ?Individual rdf:type vcard:Individual   ;
                     transraz:civilRights ?civilRights   . }
     GROUP BY ?civilRights
@@ -179,7 +182,7 @@ SELECT ?Streetname (COUNT(?Streetname) as ?frequency)
     <div class="row">
     <div class="container">
                 <div class="row align-items-center">
-                    <img src="{{ "/assets/img/logos.png" | relative_url }}" alt="FIZ Karlsruhe and KIT (AIFB)" class="img-responsive">
+                    <img src="{{ "/assets/img/logos.png" | relative_url }}" alt="FIZ Karlsruhe and KIT (AIFB)" class="img-responsive" style="padding-bottom: 20px;">
                 </div>
             </div>
     </div>
