@@ -238,7 +238,7 @@ layout: default
             <a href="http://www.w3.org/ns/oa#">http://www.w3.org/ns/oa#</a><br/>
         </dd>
         <dt>Ontology RDF</dt>
-        <dd><a href="data_file.ttl">RDF (turtle)</a></dd>
+        <dd><a href="https://github.com/ISE-FIZKarlsruhe/Transraz/TRANSRAZDataModel/transraz_datamodel.ttl">RDF (turtle)</a></dd>
     </dl>
 </section>
 <section id="toc">
@@ -249,6 +249,7 @@ layout: default
         <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
+        <li><a href="#examples">Modeling Examples</a></li>
     </ol>
 </section>
 <section id="overview">
@@ -262,7 +263,7 @@ layout: default
         </div>
         <div class="col-md-8 text-center">
             <div class="figure">
-                <img src="{{ "/assets/img/workflow.jpg" | relative_url }}" alt="NA-KG example Address Book" class="img-responsive" width="600px">
+                <img src="{{ "/assets/img/workflow.jpg" | relative_url }}" alt="Workflow" class="img-responsive" width="600px">
             </div>
     </div>
 </section>
@@ -360,18 +361,18 @@ If the instance of E29 Design or Procedure utilized for the modification prescri
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Refunction">transraz:Refunction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E12_Production">http://www.cidoc-crm.org/cidoc-crm/E12_Production</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition">http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Relabeling">transraz:Relabeling</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal">http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Relabeling">transraz:Relabeling</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition">http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Refunction">transraz:Refunction</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified">http://www.cidoc-crm.org/cidoc-crm/P31_has_modified</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P126_employed">http://www.cidoc-crm.org/cidoc-crm/P126_employed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified">http://www.cidoc-crm.org/cidoc-crm/P31_has_modified</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -402,8 +403,8 @@ An event should also be documented using an instance of E81 Transformation if it
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E11_Modification">http://www.cidoc-crm.org/cidoc-crm/E11_Modification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -415,8 +416,8 @@ An event should also be documented using an instance of E81 Transformation if it
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by">http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P186i_is_produced_by">http://www.cidoc-crm.org/cidoc-crm/P186i_is_produced_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by">http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -450,15 +451,15 @@ All other classes within the CIDOC CRM are directly or indirectly specialisation
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies">http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">http://www.cidoc-crm.org/cidoc-crm/P2_has_type</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies">http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of">http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by">http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of">http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -487,26 +488,26 @@ In a bibliographic context, a name presented following the conventions usually e
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changedOccupation">transraz:changedOccupation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born">http://www.cidoc-crm.org/cidoc-crm/P98i_was_born</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P100i_died_in">http://www.cidoc-crm.org/cidoc-crm/P100i_died_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changedOccupation">transraz:changedOccupation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/profession">http://dbpedia.org/ontology/profession</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent">http://www.cidoc-crm.org/cidoc-crm/P152_has_parent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/member">http://xmlns.com/foaf/0.1/member</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P152i_is_parent_of">http://www.cidoc-crm.org/cidoc-crm/P152i_is_parent_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P97i_was_father_for">http://www.cidoc-crm.org/cidoc-crm/P97i_was_father_for</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent">http://www.cidoc-crm.org/cidoc-crm/P152_has_parent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/profession">http://dbpedia.org/ontology/profession</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P96i_gave_birth">http://www.cidoc-crm.org/cidoc-crm/P96i_gave_birth</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born">http://www.cidoc-crm.org/cidoc-crm/P98i_was_born</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life">http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/owner">http://dbpedia.org/ontology/owner</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent">http://www.cidoc-crm.org/cidoc-crm/P152_has_parent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P97_from_father">http://www.cidoc-crm.org/cidoc-crm/P97_from_father</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P96_by_mother">http://www.cidoc-crm.org/cidoc-crm/P96_by_mother</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P97_from_father">http://www.cidoc-crm.org/cidoc-crm/P97_from_father</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/owner">http://dbpedia.org/ontology/owner</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of">http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent">http://www.cidoc-crm.org/cidoc-crm/P152_has_parent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P152i_is_parent_of">http://www.cidoc-crm.org/cidoc-crm/P152i_is_parent_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -529,36 +530,36 @@ The class also includes all aggregates of objects made for functional purposes o
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/LandPlot">transraz:LandPlot</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityPart">transraz:CityPart</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingPart">transraz:BuildingPart</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/City">transraz:City</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/RoofPart">transraz:RoofPart</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Building">transraz:Building</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingPart">transraz:BuildingPart</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/LandPlot">transraz:LandPlot</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/City">transraz:City</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityPart">transraz:CityPart</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P45_consists_of">http://www.cidoc-crm.org/cidoc-crm/P45_consists_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner">http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P45_consists_of">http://www.cidoc-crm.org/cidoc-crm/P45_consists_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P186i_is_produced_by">http://www.cidoc-crm.org/cidoc-crm/P186i_is_produced_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location">http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location">http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location">http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of">http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P50i_is_current_keeper_of">http://www.cidoc-crm.org/cidoc-crm/P50i_is_current_keeper_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of">http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of">http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of">http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P45i_is_incorporated_in">http://www.cidoc-crm.org/cidoc-crm/P45i_is_incorporated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds">http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -628,52 +629,52 @@ In some contexts, such phenomena are also called perdurants. This class is disjo
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period">http://www.cidoc-crm.org/cidoc-crm/E4_Period</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Event">transraz:Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period">http://www.cidoc-crm.org/cidoc-crm/E4_Period</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/time">transraz:time</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/duration">transraz:duration</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/time">transraz:time</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P183_ends_before_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184i_ends_with_or_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P173i_ends_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P182_ends_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P173_starts_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P174i_ends_after_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P174_starts_before_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175i_starts_after_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P175_starts_before_or_with_the_start_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P183i_starts_after_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P184_ends_before_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P182i_starts_after_or_with_the_end_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -734,29 +735,29 @@ These include reproduction and property rights.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E74_Group">http://www.cidoc-crm.org/cidoc-crm/E74_Group</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E21_Person">http://www.cidoc-crm.org/cidoc-crm/E21_Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://dbpedia.org/ontology/Agent">https://dbpedia.org/ontology/Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E21_Person">http://www.cidoc-crm.org/cidoc-crm/E21_Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E74_Group">http://www.cidoc-crm.org/cidoc-crm/E74_Group</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P28i_surrendered_custody_through">http://www.cidoc-crm.org/cidoc-crm/P28i_surrendered_custody_through</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through">http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P29i_received_custody_through">http://www.cidoc-crm.org/cidoc-crm/P29i_received_custody_through</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P50i_is_current_keeper_of">http://www.cidoc-crm.org/cidoc-crm/P50i_is_current_keeper_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by">http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P145i_left_by">http://www.cidoc-crm.org/cidoc-crm/P145i_left_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through">http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of">http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P28i_surrendered_custody_through">http://www.cidoc-crm.org/cidoc-crm/P28i_surrendered_custody_through</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through">http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P14i_performed">http://www.cidoc-crm.org/cidoc-crm/P14i_performed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P145i_left_by">http://www.cidoc-crm.org/cidoc-crm/P145i_left_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of">http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P75_possesses">http://www.cidoc-crm.org/cidoc-crm/P75_possesses</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of">http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of">http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of">http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -764,18 +765,18 @@ These include reproduction and property rights.</p>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper">http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143_joined">http://www.cidoc-crm.org/cidoc-crm/P143_joined</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of">http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">http://www.cidoc-crm.org/cidoc-crm/P11_had_participant</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109_has_current_or_former_curator">http://www.cidoc-crm.org/cidoc-crm/P109_has_current_or_former_curator</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P145_separated">http://www.cidoc-crm.org/cidoc-crm/P145_separated</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner">http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P28_custody_surrendered_by">http://www.cidoc-crm.org/cidoc-crm/P28_custody_surrendered_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from">http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P29_custody_received_by">http://www.cidoc-crm.org/cidoc-crm/P29_custody_received_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to">http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143_joined">http://www.cidoc-crm.org/cidoc-crm/P143_joined</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from">http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner">http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">http://www.cidoc-crm.org/cidoc-crm/P11_had_participant</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P109_has_current_or_former_curator">http://www.cidoc-crm.org/cidoc-crm/P109_has_current_or_former_curator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of">http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P28_custody_surrendered_by">http://www.cidoc-crm.org/cidoc-crm/P28_custody_surrendered_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P145_separated">http://www.cidoc-crm.org/cidoc-crm/P145_separated</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -841,41 +842,41 @@ Any instance of E18 Physical Thing can serve as a frame of reference for an inst
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/City">transraz:City</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityPart">transraz:CityPart</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/City">transraz:City</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of">http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89i_contains">http://www.cidoc-crm.org/cidoc-crm/P89i_contains</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with">http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by">http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">http://www.cidoc-crm.org/cidoc-crm/P89_falls_within</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of">http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with">http://www.cidoc-crm.org/cidoc-crm/P122_borders_with</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of">http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds">http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of">http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189_approximates">http://www.cidoc-crm.org/cidoc-crm/P189_approximates</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of">http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of">http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189_approximates">http://www.cidoc-crm.org/cidoc-crm/P189_approximates</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by">http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of">http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of">http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with">http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">http://www.cidoc-crm.org/cidoc-crm/P89_falls_within</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89i_contains">http://www.cidoc-crm.org/cidoc-crm/P89i_contains</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds">http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location">http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26_moved_to">http://www.cidoc-crm.org/cidoc-crm/P26_moved_to</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location">http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P27_moved_from">http://www.cidoc-crm.org/cidoc-crm/P27_moved_from</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189_approximates">http://www.cidoc-crm.org/cidoc-crm/P189_approximates</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with">http://www.cidoc-crm.org/cidoc-crm/P122_borders_with</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">http://www.cidoc-crm.org/cidoc-crm/P89_falls_within</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by">http://www.cidoc-crm.org/cidoc-crm/P189i_is_approximated_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with">http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with">http://www.cidoc-crm.org/cidoc-crm/P122_borders_with</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P27_moved_from">http://www.cidoc-crm.org/cidoc-crm/P27_moved_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location">http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">http://www.cidoc-crm.org/cidoc-crm/P89_falls_within</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location">http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P189_approximates">http://www.cidoc-crm.org/cidoc-crm/P189_approximates</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26_moved_to">http://www.cidoc-crm.org/cidoc-crm/P26_moved_to</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P89i_contains">http://www.cidoc-crm.org/cidoc-crm/P89i_contains</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -904,10 +905,10 @@ E55 Type is the CIDOC CRM’s interface to domain specific ontologies and thesau
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingFunction">transraz:BuildingFunction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingPartType">transraz:BuildingPartType</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E56_Language">http://www.cidoc-crm.org/cidoc-crm/E56_Language</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/RoofPartType">transraz:RoofPartType</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E56_Language">http://www.cidoc-crm.org/cidoc-crm/E56_Language</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingFunction">transraz:BuildingFunction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/RoofType">transraz:RoofType</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E57_Material">http://www.cidoc-crm.org/cidoc-crm/E57_Material</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
@@ -915,35 +916,35 @@ E55 Type is the CIDOC CRM’s interface to domain specific ontologies and thesau
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by">http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in">http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term">http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P150i_defines_typical_wholes_for">http://www.cidoc-crm.org/cidoc-crm/P150i_defines_typical_wholes_for</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P101i_was_use_of">http://www.cidoc-crm.org/cidoc-crm/P101i_was_use_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by">http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term">http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of">http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of">http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in">http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of">http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of">http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P127i_has_narrower_term">http://www.cidoc-crm.org/cidoc-crm/P127i_has_narrower_term</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of">http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of">http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of">http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by">http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by">http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">http://www.cidoc-crm.org/cidoc-crm/P2_has_type</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose">http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P135_created_type">http://www.cidoc-crm.org/cidoc-crm/P135_created_type</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P127i_has_narrower_term">http://www.cidoc-crm.org/cidoc-crm/P127i_has_narrower_term</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies">http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of">http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term">http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">http://www.cidoc-crm.org/cidoc-crm/P2_has_type</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P101_had_as_general_use">http://www.cidoc-crm.org/cidoc-crm/P101_had_as_general_use</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P135_created_type">http://www.cidoc-crm.org/cidoc-crm/P135_created_type</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies">http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for">http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P150i_defines_typical_wholes_for">http://www.cidoc-crm.org/cidoc-crm/P150i_defines_typical_wholes_for</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type">http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for">http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose">http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of">http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1003,8 +1004,8 @@ It is recommended that internationally or nationally agreed codes and terminolog
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P126_employed">http://www.cidoc-crm.org/cidoc-crm/P126_employed</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P45_consists_of">http://www.cidoc-crm.org/cidoc-crm/P45_consists_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P126_employed">http://www.cidoc-crm.org/cidoc-crm/P126_employed</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1035,25 +1036,25 @@ Viewed at a coarse level of detail, an instance of E5 Event may appear as if it 
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">http://www.cidoc-crm.org/cidoc-crm/E7_Activity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">http://www.cidoc-crm.org/cidoc-crm/P11_had_participant</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">http://www.cidoc-crm.org/cidoc-crm/P11_had_participant</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose">http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose">http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1081,11 +1082,11 @@ It may be used for temporal reasoning about things (intellectual products, physi
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E66_Formation">http://www.cidoc-crm.org/cidoc-crm/E66_Formation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">http://www.cidoc-crm.org/cidoc-crm/E65_Creation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E67_Birth">http://www.cidoc-crm.org/cidoc-crm/E67_Birth</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation">http://www.cidoc-crm.org/cidoc-crm/E81_Transformation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E66_Formation">http://www.cidoc-crm.org/cidoc-crm/E66_Formation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E12_Production">http://www.cidoc-crm.org/cidoc-crm/E12_Production</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">http://www.cidoc-crm.org/cidoc-crm/E65_Creation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1125,10 +1126,10 @@ It may be used for temporal reasoning about things (physical items, groups of pe
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E69_Death">http://www.cidoc-crm.org/cidoc-crm/E69_Death</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E6_Destruction">http://www.cidoc-crm.org/cidoc-crm/E6_Destruction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation">http://www.cidoc-crm.org/cidoc-crm/E81_Transformation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E69_Death">http://www.cidoc-crm.org/cidoc-crm/E69_Death</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution">http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E6_Destruction">http://www.cidoc-crm.org/cidoc-crm/E6_Destruction</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1161,8 +1162,8 @@ It may be used for temporal reasoning about things (physical items, groups of pe
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">http://www.cidoc-crm.org/cidoc-crm/E7_Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1210,15 +1211,15 @@ The formation of an instance of E74 Group does not require that the group is pop
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P95_has_formed">http://www.cidoc-crm.org/cidoc-crm/P95_has_formed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by">http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1246,17 +1247,17 @@ Twins, triplets etc. are typically brought into life by the same instance of E67
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life">http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P96_by_mother">http://www.cidoc-crm.org/cidoc-crm/P96_by_mother</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P97_from_father">http://www.cidoc-crm.org/cidoc-crm/P97_from_father</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P96_by_mother">http://www.cidoc-crm.org/cidoc-crm/P96_by_mother</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life">http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P97i_was_father_for">http://www.cidoc-crm.org/cidoc-crm/P97i_was_father_for</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born">http://www.cidoc-crm.org/cidoc-crm/P98i_was_born</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P96i_gave_birth">http://www.cidoc-crm.org/cidoc-crm/P96i_gave_birth</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born">http://www.cidoc-crm.org/cidoc-crm/P98i_was_born</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1437,16 +1438,16 @@ These items are either intellectual products or human-made physical things, and 
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for">http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for">http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of">http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of">http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1480,23 +1481,23 @@ A gathering of people becomes an instance of E74 Group when it exhibits organiza
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by">http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by">http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P146i_lost_member_by">http://www.cidoc-crm.org/cidoc-crm/P146i_lost_member_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by">http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by">http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by">http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P144_joined_with">http://www.cidoc-crm.org/cidoc-crm/P144_joined_with</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of">http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P146_separated_from">http://www.cidoc-crm.org/cidoc-crm/P146_separated_from</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P99_dissolved">http://www.cidoc-crm.org/cidoc-crm/P99_dissolved</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P95_has_formed">http://www.cidoc-crm.org/cidoc-crm/P95_has_formed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P99_dissolved">http://www.cidoc-crm.org/cidoc-crm/P99_dissolved</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P144_joined_with">http://www.cidoc-crm.org/cidoc-crm/P144_joined_with</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of">http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P146_separated_from">http://www.cidoc-crm.org/cidoc-crm/P146_separated_from</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1535,16 +1536,16 @@ An instance of E77 Persistent Item does not require actual knowledge of the iden
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by">http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P92i_was_brought_into_existence_by">http://www.cidoc-crm.org/cidoc-crm/P92i_was_brought_into_existence_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence">http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence">http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence">http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1606,35 +1607,35 @@ This notion includes complex, composite and long-lasting actions such as the bui
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/OcupationalChange">transraz:OcupationalChange</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">http://www.cidoc-crm.org/cidoc-crm/E65_Creation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E9_Move">http://www.cidoc-crm.org/cidoc-crm/E9_Move</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E11_Modification">http://www.cidoc-crm.org/cidoc-crm/E11_Modification</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E85_Joining">http://www.cidoc-crm.org/cidoc-crm/E85_Joining</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition">http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E86_Leaving">http://www.cidoc-crm.org/cidoc-crm/E86_Leaving</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E11_Modification">http://www.cidoc-crm.org/cidoc-crm/E11_Modification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E85_Joining">http://www.cidoc-crm.org/cidoc-crm/E85_Joining</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E66_Formation">http://www.cidoc-crm.org/cidoc-crm/E66_Formation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E9_Move">http://www.cidoc-crm.org/cidoc-crm/E9_Move</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/OcupationalChange">transraz:OcupationalChange</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of">http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose">http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type">http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of">http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose">http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for">http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P14i_performed">http://www.cidoc-crm.org/cidoc-crm/P14i_performed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of">http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of">http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for">http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in">http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -1663,15 +1664,15 @@ Typical scenarios include the detachment of an accessory, the removal of a compo
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P112_diminished">http://www.cidoc-crm.org/cidoc-crm/P112_diminished</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P113_removed">http://www.cidoc-crm.org/cidoc-crm/P113_removed</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P112_diminished">http://www.cidoc-crm.org/cidoc-crm/P112_diminished</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P113i_was_removed_by">http://www.cidoc-crm.org/cidoc-crm/P113i_was_removed_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P112i_was_diminished_by">http://www.cidoc-crm.org/cidoc-crm/P112i_was_diminished_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P113i_was_removed_by">http://www.cidoc-crm.org/cidoc-crm/P113i_was_removed_by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1701,15 +1702,15 @@ Even though such instances of E81 Transformation are often motivated by a change
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P124_transformed">http://www.cidoc-crm.org/cidoc-crm/P124_transformed</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in">http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P124_transformed">http://www.cidoc-crm.org/cidoc-crm/P124_transformed</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by">http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P123i_resulted_from">http://www.cidoc-crm.org/cidoc-crm/P123i_resulted_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by">http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1771,15 +1772,15 @@ Typical scenarios include becoming a member of a social organisation, becoming e
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143_joined">http://www.cidoc-crm.org/cidoc-crm/P143_joined</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P144_joined_with">http://www.cidoc-crm.org/cidoc-crm/P144_joined_with</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143_joined">http://www.cidoc-crm.org/cidoc-crm/P143_joined</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by">http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by">http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by">http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1807,8 +1808,8 @@ Typical scenarios include the termination of membership in a social organisation
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P146_separated_from">http://www.cidoc-crm.org/cidoc-crm/P146_separated_from</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P145_separated">http://www.cidoc-crm.org/cidoc-crm/P145_separated</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P146_separated_from">http://www.cidoc-crm.org/cidoc-crm/P146_separated_from</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1849,15 +1850,15 @@ This class also comprises items that are “about” something in the sense of a
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">http://www.cidoc-crm.org/cidoc-crm/P148_has_component</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">http://www.cidoc-crm.org/cidoc-crm/P148_has_component</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1897,15 +1898,15 @@ It may also describe events where a collector appropriates legal title, for exam
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to">http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from">http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to">http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through">http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through">http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through">http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1956,16 +1957,16 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P25_moved">http://www.cidoc-crm.org/cidoc-crm/P25_moved</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26_moved_to">http://www.cidoc-crm.org/cidoc-crm/P26_moved_to</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P27_moved_from">http://www.cidoc-crm.org/cidoc-crm/P27_moved_from</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26_moved_to">http://www.cidoc-crm.org/cidoc-crm/P26_moved_to</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of">http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of">http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P25i_moved_by">http://www.cidoc-crm.org/cidoc-crm/P25i_moved_by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of">http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1992,8 +1993,8 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://dbpedia.org/ontology/Person">https://dbpedia.org/ontology/Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://dbpedia.org/ontology/Organization">https://dbpedia.org/ontology/Organization</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://dbpedia.org/ontology/Person">https://dbpedia.org/ontology/Person</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2033,9 +2034,9 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://dbpedia.org/ontology/employer">http://dbpedia.org/ontology/employer</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/member">http://xmlns.com/foaf/0.1/member</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://purl.org/dc/terms/publisher">http://purl.org/dc/terms/publisher</a><br/>
-                    <a href="http://dbpedia.org/ontology/employer">http://dbpedia.org/ontology/employer</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2062,32 +2063,32 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://dbpedia.org/ontology/employer">http://dbpedia.org/ontology/employer</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://xmlns.com/foaf/0.1/knows">http://xmlns.com/foaf/0.1/knows</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://xmlns.com/foaf/0.1/familyName">http://xmlns.com/foaf/0.1/familyName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://dbpedia.org/ontology/child">http://dbpedia.org/ontology/child</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/brother">http://dbpedia.org/ontology/brother</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/sister">http://dbpedia.org/ontology/sister</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://dbpedia.org/ontology/relative">http://dbpedia.org/ontology/relative</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://xmlns.com/foaf/0.1/givenName">http://xmlns.com/foaf/0.1/givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://dbpedia.org/ontology/parent">http://dbpedia.org/ontology/parent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/friend">http://dbpedia.org/ontology/friend</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/spouse">http://dbpedia.org/ontology/spouse</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/deathDate">transraz:deathDate</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/birthDate">transraz:birthDate</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/sister">http://dbpedia.org/ontology/sister</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/familyName">http://xmlns.com/foaf/0.1/familyName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://dbpedia.org/ontology/brother">http://dbpedia.org/ontology/brother</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/spouse">http://dbpedia.org/ontology/spouse</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/child">http://dbpedia.org/ontology/child</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/parent">http://dbpedia.org/ontology/parent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/employer">http://dbpedia.org/ontology/employer</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/deathDate">transraz:deathDate</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/givenName">http://xmlns.com/foaf/0.1/givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://dbpedia.org/ontology/friend">http://dbpedia.org/ontology/friend</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/knows">http://xmlns.com/foaf/0.1/knows</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://dbpedia.org/ontology/parent">http://dbpedia.org/ontology/parent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/relative">http://dbpedia.org/ontology/relative</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/spouse">http://dbpedia.org/ontology/spouse</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://dbpedia.org/ontology/child">http://dbpedia.org/ontology/child</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/knows">http://xmlns.com/foaf/0.1/knows</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/spouse">http://dbpedia.org/ontology/spouse</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/relative">http://dbpedia.org/ontology/relative</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/sister">http://dbpedia.org/ontology/sister</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/brother">http://dbpedia.org/ontology/brother</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://dbpedia.org/ontology/parent">http://dbpedia.org/ontology/parent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://dbpedia.org/ontology/friend">http://dbpedia.org/ontology/friend</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/brother">http://dbpedia.org/ontology/brother</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://dbpedia.org/ontology/sister">http://dbpedia.org/ontology/sister</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2103,8 +2104,8 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
                 <th>In range of</th>
                 <td>
                     <a href="http://dbpedia.org/ontology/profession">http://dbpedia.org/ontology/profession</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationFrom">transraz:changeOccupationFrom</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationTo">transraz:changeOccupationTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationFrom">transraz:changeOccupationFrom</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2248,9 +2249,9 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Facade">transraz:Facade</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Roof">transraz:Roof</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/BuildingLevel">transraz:BuildingLevel</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Facade">transraz:Facade</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2262,8 +2263,8 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/buildingComposedOf">transraz:buildingComposedOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/buildingpartComposedOf">transraz:buildingpartComposedOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/buildingComposedOf">transraz:buildingComposedOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2278,7 +2279,7 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>Architectural type of a building, e.g. corner building.</p>
+                    <p>Architectural type of a building or its part, e.g. corner building.</p>
                 </td>
             </tr>
             <tr>
@@ -2307,12 +2308,6 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E53_Place">http://www.cidoc-crm.org/cidoc-crm/E53_Place</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/cityComposedOf">transraz:cityComposedOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2354,16 +2349,16 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E53_Place">http://www.cidoc-crm.org/cidoc-crm/E53_Place</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityHalf">transraz:CityHalf</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Street">transraz:Street</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityQuarter">transraz:CityQuarter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityHalf">transraz:CityHalf</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2486,8 +2481,8 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationTo">transraz:changeOccupationTo</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationFrom">transraz:changeOccupationFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/changeOccupationTo">transraz:changeOccupationTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2655,6 +2650,12 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
                     <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityPart">transraz:CityPart</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/streetComposedOf">transraz:streetComposedOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
         </table>
     </div>
 </section>
@@ -2762,7 +2763,7 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
         <li><a href="#acquiredtitlethrough">acquired title through</a></li>
         <li><a href="#transferredtitlefrom">transferred title from</a></li>
         <li><a href="#surrenderedtitlethrough">surrendered title through</a></li>
-        <li><a href="#">переместил</a></li>
+        <li><a href="#moved">moved</a></li>
         <li><a href="#movedby">moved by</a></li>
         <li><a href="#movedto">moved to</a></li>
         <li><a href="#wasdestinationof">was destination of</a></li>
@@ -2802,7 +2803,7 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
         <li><a href="#wasbroughtintoexistenceby">was brought into existence by</a></li>
         <li><a href="#tookoutofexistence">took out of existence</a></li>
         <li><a href="#wastakenoutofexistenceby">was taken out of existence by</a></li>
-        <li><a href="#P94_has_created">δημιούργησε</a></li>
+        <li><a href="#hascreated">has created</a></li>
         <li><a href="#P94i_was_created_by">was created by</a></li>
         <li><a href="#hasformed">has formed</a></li>
         <li><a href="#wasformedby">was formed by</a></li>
@@ -2810,7 +2811,7 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
         <li><a href="#gavebirth">gave birth</a></li>
         <li><a href="#fromfather">from father</a></li>
         <li><a href="#wasfatherfor">was father for</a></li>
-        <li><a href="#P98_brought_into_life">έφερε στη ζωή</a></li>
+        <li><a href="#">诞生了</a></li>
         <li><a href="#wasborn">was born</a></li>
         <li><a href="#dissolved">dissolved</a></li>
         <li><a href="#wasdissolvedby">was dissolved by</a></li>
@@ -2824,7 +2825,6 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
         <li><a href="#changeoccupationfrom">change occupation from</a></li>
         <li><a href="#changeoccupationto">change occupation to</a></li>
         <li><a href="#changedOccupation">changedOccupation</a></li>
-        <li><a href="#citycomposedof">city composed of</a></li>
         <li><a href="#citypartcomposedof">city part composed of</a></li>
         <li><a href="#deathDate">deathDate</a></li>
         <li><a href="#duration">duration</a></li>
@@ -2833,6 +2833,7 @@ Note, that the class E9 Move inherits the property P7 took place at (witnessed):
         <li><a href="#landplotcomposedof">landplot composed of</a></li>
         <li><a href="#previousOccupation">previousOccupation</a></li>
         <li><a href="#roofcomposedof">roof composed of</a></li>
+        <li><a href="#streetcomposedof">street composed of</a></li>
         <li><a href="#time">time</a></li>
     </ul>
     <div class="entity property" id="brother">
@@ -3355,8 +3356,8 @@ The identity of an instance of E24 Physical Human-Made Thing is not defined by i
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence">http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified">http://www.cidoc-crm.org/cidoc-crm/P31_has_modified</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence">http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -5138,8 +5139,8 @@ Figure 17: Temporal entity A ends before or with the start of temporal entity B.
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185_ends_before_the_end_of</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176_starts_before_the_start_of</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -5172,8 +5173,8 @@ Figure 17: Temporal entity A ends before or with the start of temporal entity B.
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of">http://www.cidoc-crm.org/cidoc-crm/P185i_ends_after_the_end_of</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of">http://www.cidoc-crm.org/cidoc-crm/P176i_starts_after_the_start_of</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -5799,8 +5800,8 @@ The property will typically be used to describe a person donating or selling an 
             </tr>
         </table>
     </div>
-    <div class="entity property" id="">
-        <h3>переместил<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="moved">
+        <h3>moved<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -6975,8 +6976,8 @@ This allows an “end” to be attached to any instance of E77 Persistent Item b
             </tr>
         </table>
     </div>
-    <div class="entity property" id="P94_has_created">
-        <h3>δημιούργησε<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hascreated">
+        <h3>has created<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -7232,8 +7233,8 @@ An instance of E67 Birth is normally (but not always) associated with one biolog
             </tr>
         </table>
     </div>
-    <div class="entity property" id="P98_brought_into_life">
-        <h3>έφερε στη ζωή<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="">
+        <h3>诞生了<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -7315,8 +7316,8 @@ Twins, triplets etc. are brought into life by the same instance of E67 Birth. Th
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence">http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">http://www.cidoc-crm.org/cidoc-crm/P11_had_participant</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence">http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -7349,8 +7350,8 @@ Twins, triplets etc. are brought into life by the same instance of E67 Birth. Th
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by">http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by">http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -7661,40 +7662,6 @@ Twins, triplets etc. are brought into life by the same instance of E67 Birth. Th
             </tr>
         </table>
     </div>
-    <div class="entity property" id="citycomposedof">
-        <h3>city composed of<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://ise-fizkarlsruhe.github.io/Transraz/datamodel/cityComposedOf</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    connects a city to a city part or a landplot that forms it.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/City">transraz:City</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/CityPart">transraz:CityPart</a><sup class="sup-c" title="class">c</sup>
-                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/LandPlot">transraz:LandPlot</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="citypartcomposedof">
         <h3>city part composed of<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -7865,6 +7832,40 @@ Twins, triplets etc. are brought into life by the same instance of E67 Birth. Th
             </tr>
         </table>
     </div>
+    <div class="entity property" id="streetcomposedof">
+        <h3>street composed of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://ise-fizkarlsruhe.github.io/Transraz/datamodel/streetComposedOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    connects a street to a landplot or a building that forms it.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Street">transraz:Street</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/Building">transraz:Building</a><sup class="sup-c" title="class">c</sup>
+                    <a href="https://ise-fizkarlsruhe.github.io/Transraz/datamodel/LandPlot">transraz:LandPlot</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="time">
         <h3>time<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -8011,6 +8012,16 @@ Twins, triplets etc. are brought into life by the same instance of E67 Birth. Th
           <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
           <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
       </table>
+  </section>
+  <section id="examples">
+      <h2>Modeling Examples with Instances</h2>
+      <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="figure">
+                <img src="{{ "/assets/img/workflow.jpg" | relative_url }}" alt="Workflow" class="img-responsive" width="600px">
+            </div>
+    </div>
   </section>
   <hr>
     <div class="row">
