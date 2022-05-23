@@ -3,6 +3,15 @@
 [TRANSRAZ](https://www.fiz-karlsruhe.de/en/forschung/transraz) is an ongoing research project aiming at connecting heterogeneous historical data collections to an architectural 3D virtual research environment (VRE) using KGs. 
 The overall goal is to enable the exploration of the historic city of Nuremberg in different time periods ranging from the Middle Ages to the 21st century.
 
+## TRANSRAZ Data Model
+
+This repository contains the data model developed to describe resources of the TRANSRAZ project. The ongoing work is introduced in:
+```
+Oleksandra Bruns, Tabea Tietz, Sandra Göller and Harald Sack
+TRANSRAZ Data Model: Towards a Geosocial Representation of Historical Cities.
+Submitted to Semantics 2022 Research & Innovation Track.
+```
+
 ## Nuremberg Address Knowledge Graph
 
 This repository contains resources of ongoing work introduced in the poster paper:
