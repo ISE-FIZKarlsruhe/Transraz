@@ -8,7 +8,14 @@ layout: default
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <style>
-
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
         #pylode a {
             font-size: 2em;
             font-weight: bold;
@@ -196,20 +203,12 @@ layout: default
 </head>
 <body>
 
-<div class="header-container jumbotron">
-    <div class="container">
-        <div>
-        <h1>TRANSRAZ Data Model</h1>
-        <p><b>Authors: Oleksandra Bruns, Tabea Tietz, Sandra Göller, Harald Sack</b></p>
-        </div>
-        
-        <a class="btn btn-primary btn-lg" href="https://www.researchgate.net/publication/351124383_The_Nuremberg_Address_Knowledge_Graph" role="button">Poster Paper on Research Gate</a>
-        <a class="btn btn-primary btn-lg" href="https://youtu.be/DFhPbKqMKlw" role="button">Video</a>
-        <a class="btn btn-primary btn-lg" href="#cite" role="button">How to cite</a>
-        <a class="btn btn-primary btn-lg" href="#authors" role="button">Authors</a>
-
-    </div>
-    </div>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.3</span>
+  </div>
+  
+  <h1>TRANSRAZ Data Model</h1>
   
 <section id="metadata">
     <h2 style="display:none;">Metadata</h2>
