@@ -8,3 +8,4 @@ Preserving historical city architectures and making them (publicly) available ha
 
 - The TRANSRAZ data model is available [here](https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/TRANSRAZDataModel/transraz_datamodel.ttl). 
 - The documentation is available [here](https://ise-fizkarlsruhe.github.io/Transraz/datamodel).
+- The data model with instance examples is available [here](https://ise-fizkarlsruhe.github.io/Transraz/datamodel#examples).
