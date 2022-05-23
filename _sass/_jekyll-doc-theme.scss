@@ -39,6 +39,30 @@ html {
     background-position: center 36%;
     margin-top: -37px;
   }
+
+  .header-container-white {
+    background-color: white;
+    background-size:cover;
+    background-blend-mode: multiply;
+    padding-top: 30px ;
+    padding-bottom: 30px ;
+  
+    h1 {
+      color: #34495e;
+      font-weight: 500;
+    }
+    
+    p {
+      color: #34495e;
+      font-weight: 500;
+    }
+      
+    // background-attachment: fixed;
+    background-size: cover;
+    background-position: center 36%;
+    margin-top: -37px;
+  }
+
   .navbar-container {
     font-size: 16px;
   }
