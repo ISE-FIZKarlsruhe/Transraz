@@ -1,0 +1,348 @@
+1. Show all persons 
+SELECT ?name
+WHERE { 
+?person rdf:type <http://dbpedia.org/ontology/Person> ;
+               rdfs:label ?name }
+
+
+2. Count all persons
+
+SELECT (count(?person) as ?nPersons) 
+
+WHERE {
+?person rdf:type <http://dbpedia.org/ontology/Person> }
+
+3. Count all organisations
+
+SELECT (count(?organisation) as ?nOrganisation) 
+
+WHERE {
+?organisation rdf:type <http://dbpedia.org/ontology/Organisation> }
+
+CQs: 
+
+Category 1 "Ancestor Search": 
+
+1. What information is available for family or namesakes with last name Ruppert living in the city?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+
+SELECT ?name ?predicate ?objectL
+WHERE { 
+?person rdf:type dbo:Person ;
+               foaf:familyName "Ruppert" ;
+               rdfs:label ?name  ;
+               ?predicate ?object .
+OPTIONAL {?object rdfs:label ?objectL}
+FILTER isLiteral(?objectL)
+}
+
+2. Show all people who lived under address "Engelsgasse 17". If available, show more specific information about the addresses, e.g. floor.
+
+#Zeige alle Personen, die unter der Adresse "Engelsgasse 17" in 1908 gewohnt haben. Falls vorhanden, zeige spezifischere Informationen zu den Adressen anzeigen, z.B.  Etage.
+
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX cidoc: <http://cidoc-crm.org/cidoc-crm/7.1.2/>
+
+SELECT DISTINCT ?name  ?addressName 
+WHERE { 
+?activity transraz:associatedWithAddress ?address ;
+                cidoc:P14_carried_out_by ?person ;
+                transraz:time ?time .
+?time rdfs:label "[1908]" .
+?person rdfs:label ?name .
+?address rdfs:label ?addressName .
+?buildingPart rdf:type transraz:BuildingPart ;
+                       rdfs:label ?addressName . 
+
+OPTIONAL {?buildingPart transraz:buildingpartComposedOf ?builPart .
+?builPart rdf:type transraz:BuildingPart ;
+                rdfs:label  ?partAddName .}
+
+{?builPart transraz:buildingpartComposedOf ?building} UNION {?buildingPart transraz:buildingpartComposedOf ?building} .
+?building rdf:type transraz:Building ;
+                rdfs:label "Engelsgasse 17"
+}
+
+
+
+3. What did the Karlsbrücke street look like in the past? What kind of industries were based there?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?branchName (COUNT(?branchName) as ?frequency)
+WHERE 
+{
+?company rdf:type dbo:Organisation ;
+                   transraz:branch?branch ;
+                   transraz:address ?address .
+?address rdfs:label ?addressName . 
+?building rdf:type transraz:Building ;
+                       rdfs:label ?addressName ;
+                transraz:streetAddress ?street .
+?street rdfs:label "Karlsbrücke" .
+?branch rdfs:label ?branchName
+}
+GROUP BY ?branchName
+ORDER BY DESC(?frequency)
+
+Category 2: "Wealth Distribution."
+
+
+1a. Which properties and real estates belonged to a family or namesakes Pirner and how did they distribute throughout the city?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?ownerName ?buildingName 
+WHERE 
+{
+?owner dbo:owner ?address   ;
+              rdfs:label   ?ownerName ;
+              foaf:familyName "Pirner".
+?address rdfs:label ?addressName .
+?buildingPart rdf:type transraz:BuildingPart ;
+                       rdfs:label ?addressName ;
+                       transraz:buildingpartComposedOf ?building .
+?building rdf:type transraz:Building ;
+                 rdfs:label ?buildingName ;
+                transraz:streetAddress ?street .
+?street rdfs:label ?streetName.
+
+}
+
+
+1b. Who owned properties and real estates in the Friedenstraße? 
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?ownerName ?buildingName
+WHERE 
+{
+?owner dbo:owner ?address   ;
+              rdfs:label   ?ownerName .
+?address rdfs:label ?addressName .
+?buildingPart rdf:type transraz:BuildingPart ;
+                       rdfs:label ?addressName ;
+                       transraz:buildingpartComposedOf ?building .
+?building rdf:type transraz:Building ;
+                 rdfs:label ?buildingName ;
+                transraz:streetAddress ?street .
+?street rdfs:label "Friedenstraße".
+
+}
+ORDER BY ?buildingName
+
+2. Where did teachers ("Lehrer") of Nuremberg live?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?streetName (COUNT(?streetName) as ?frequency)
+
+WHERE 
+{
+?person dbo:profession ?occupation ;
+               transraz:address ?address.
+?occupation rdfs:label "Lehrer" . 
+?address rdfs:label ?addressName .
+?buildingPart rdf:type transraz:BuildingPart ;
+                       rdfs:label ?addressName ;
+                       transraz:buildingpartComposedOf ?building .
+?building rdf:type transraz:Building ;
+                 rdfs:label ?buildingName ;
+                transraz:streetAddress ?street .
+?street rdfs:label ?streetName.
+}
+GROUP BY ?streetName
+ORDER BY DESC(?frequency)
+
+3. Where did breweries ("Bierbrauerei") establish?
+
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?streetName (COUNT(?streetName) as ?frequency)
+WHERE 
+{
+?company transraz:branch ?branch ;
+                   transraz:address ?address .
+?branch rdfs:label "Bierbrauerei". 
+?address rdfs:label ?addressName .
+?building rdf:type transraz:Building ;
+                 rdfs:label ?addressName ;
+                transraz:streetAddress ?street .
+?street rdfs:label ?streetName.
+}
+GROUP BY ?streetName
+ORDER BY DESC(?frequency)
+
+Category 3 "Change and Events"
+
+1. Where did Georg Philipp Höfler live in the city throughout time?
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX cidoc: <http://cidoc-crm.org/cidoc-crm/7.1.2/>
+
+SELECT ?personName  ?addressLabel ?timeLabel 
+WHERE {
+?person rdfs:label "Georg Philipp Höfler" ;
+              rdfs:label ?personName .
+?activity cidoc:P14_carried_out_by ?person ;
+               transraz:associatedWithAddress ?address ;
+               transraz:time ?time .
+
+?time rdfs:label ?timeLabel .
+?address rdfs:label ?addressLabel .
+}
+
+2. Where were the schools located in 1908 and how thei school establishment of Nuremberg developed throuhout time?
+
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX cidoc: <http://cidoc-crm.org/cidoc-crm/7.1.2/>
+SELECT ?schoolLabel ?addressLabel ?foundingTimeLabel
+
+WHERE {
+?school transraz:branch ?branch ;
+              rdfs:label ?schoolLabel .
+?branch rdfs:label "Schule" .
+?activity cidoc:P14_carried_out_by ?school ;
+               transraz:time ?time ;
+               transraz:associatedWithAddress ?address .
+?time rdfs:label "[1908]".
+?address rdfs:label ?addressLabel .
+OPTIONAL  {?school transraz:foundingPeriod ?foundingTime .
+?foundingTime rdfs:label ?foundingTimeLabel .}
+}
+
+
+Category 3 "Social and Cultural"
+
+1. What were the main cultural areas in the city, e.g. cultural and art institutions? 
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+WHERE {
+?organisation transraz:branch ?branch ;
+              rdfs:label ?organisationLabel ;
+              transraz:address ?address .
+?address rdfs:label ?addressLabel .
+?branch rdfs:label "Kunstanstalt".
+}
+
+ORDER BY ?addressLabel
+
+2. In which parts of the city did most artists live?
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+
+SELECT ?streetName (COUNT(?streetName) as ?frequency)
+WHERE {
+?person dbo:profession ?profession ;
+               transraz:address ?address .
+?address rdfs:label ?addressName .
+?buildingPart rdf:type transraz:BuildingPart ;
+                       rdfs:label ?addressName ;
+                       transraz:buildingpartComposedOf ?building .
+?building rdf:type transraz:Building ;
+                 rdfs:label ?buildingName ;
+                transraz:streetAddress ?street .
+?street rdfs:label ?streetName.
+?profession rdfs:label ?profLabel .
+FILTER regex( str(?profLabel), "[Aa]rchitekt|[Mm]aler|[Kk]unstler|[Aa]rtist|[Ss]tifter|[Mm]usik|[Ss]teinmeißel|[Bb]ildhauer|[Kk]unst|[Gg]ravier")
+
+}
+GROUP BY ?streetName
+ORDER BY DESC(?frequency)
+
+
+Category 6 "Historical Sources and Provinance"
+
+1. What historical literature mentiones Friendenstraße?
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+
+SELECT DISTINCT ?documentLabel
+WHERE {
+?street rdf:type dbo:Street  ;
+             rdfs:label ?streetLabel ;
+             rdfs:label "Friedenstraße" .
+?annotation oa:hasTarget ?page ;
+                     oa:hasBody ?street .
+?document frbr:part ?page ;
+                    rdfs:label ?documentLabel .
+}
+
+2. Where can be information about Friedenstraße be found in the historical resource, e.g. page number or coordinates? 
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+
+SELECT DISTINCT ?streetLabel ?pageLabel ?coordinates
+WHERE {
+?street rdf:type dbo:Street  ;
+             rdfs:label ?streetLabel ;
+             rdfs:label "Friedenstraße" .
+?annotation oa:hasTarget ?page ;
+                     oa:hasBody ?street ;
+                     transraz:altoCoordinates ?coordinates.
+?page rdfs:label ?pageLabel .
+}
+
+3. What types of documents mention Friedenstraße? 
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+
+SELECT DISTINCT ?documentType ?bookType
+WHERE {
+?street rdf:type dbo:Street  ;
+             rdfs:label ?streetLabel ;
+             rdfs:label "Friedenstraße" .
+?annotation oa:hasTarget ?page ;
+                     oa:hasBody ?street .
+?book frbr:part ?page ;
+                    rdf:type ?bookType .
+?document fabio:hasManifestation ?book ;
+                     rdf:type ?documentType .
+
+}
+
+4. How and when were the annotations of Friedenstraße created? Manually or automatically?
+
+PREFIX transraz: <http://toporaz.de/ontology/2022/11/owl/>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?streetLabel ?pageLabel ?annotationCreator ?date 
+WHERE {
+?street rdf:type dbo:Street  ;
+             rdfs:label ?streetLabel ;
+             rdfs:label "Friedenstraße" .
+?annotation oa:hasTarget ?page ;
+                     oa:hasBody ?street ;
+                     dcterms:creator ?annotationCreator ;
+                     dcterms:created ?date .
+?page rdfs:label ?pageLabel .
+}
+
+
+
