@@ -26,7 +26,7 @@ layout: default
 <code>PREFIX cidoc: &lt;http://cidoc-crm.org/cidoc-crm/7.1.2/&gt; </code> <br><br>
 
 <div class="container">
-<h4>Category 1: Ancestor Search</h4>
+<h4 id="cat1">Category 1: Ancestor Search</h4>
     <div class="row">
     <div class="col-md-6">
         <p class="lead" align="justify"><strong>Query 1:</strong> 
@@ -47,6 +47,7 @@ WHERE {
 OPTIONAL {?object rdfs:label ?objectL}
 FILTER isLiteral(?objectL)}
         </code></pre>
+    </div>
     </div>
 
     <div class="row">
@@ -86,6 +87,11 @@ OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
 
 
     </div>
+
+
+
+
+    
 </div>
 <h4>Category 2: Wealth Distribution</h4>
     <div class="col-md-6">
