@@ -43,11 +43,11 @@ layout: default
 SELECT ?name ?predicate ?objectL
 WHERE { 
     ?person rdf:type dbo:Person ;
-            foaf:familyName "Ruppert" ;
-            rdfs:label ?name  ;
-            ?predicate ?object .
-OPTIONAL {?object rdfs:label ?objectL}
-FILTER isLiteral(?objectL)}
+        foaf:familyName "Ruppert" ;
+        rdfs:label ?name  ;
+        ?predicate ?object .
+    OPTIONAL {?object rdfs:label ?objectL}
+    FILTER isLiteral(?objectL)}
         </code></pre>
     </div>
     </div>
@@ -74,7 +74,7 @@ WHERE {
     ?buildingPart rdf:type transraz:BuildingPart ;
         rdfs:label ?addressName . 
 
-OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
+    OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
            ?builPart rdf:type transraz:BuildingPart ;
                 rdfs:label  ?partAddName .}
     {?builPart transraz:buildingpartComposedOf ?building} 
@@ -99,16 +99,16 @@ OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
     <div class="col-md-6">
         <pre><code>
 SELECT ?branchName (COUNT(?branchName) as ?frequency)
-    WHERE {
-        ?company rdf:type dbo:Organisation ;
-                 transraz:branch?branch ;
-                 transraz:address ?address .
-        ?address rdfs:label ?addressName . 
-        ?building rdf:type transraz:Building ;
-                  rdfs:label ?addressName ;
-                  transraz:streetAddress ?street .
-        ?street rdfs:label "Karlsbrücke" .
-        ?branch rdfs:label ?branchName . }
+WHERE {
+    ?company rdf:type dbo:Organisation ;
+             transraz:branch?branch ;
+             transraz:address ?address .
+    ?address rdfs:label ?addressName . 
+    ?building rdf:type transraz:Building ;
+              rdfs:label ?addressName ;
+              transraz:streetAddress ?street .
+    ?street rdfs:label "Karlsbrücke" .
+    ?branch rdfs:label ?branchName . }
 GROUP BY ?branchName
 ORDER BY DESC(?frequency)
         </code></pre>
@@ -164,17 +164,17 @@ WHERE {
     <div class="col-md-6">
         <pre><code>
 SELECT ?ownerName ?buildingName
-    WHERE {
-        ?owner dbo:owner ?address   ;
+WHERE {
+    ?owner dbo:owner ?address   ;
                rdfs:label   ?ownerName .
-        ?address rdfs:label ?addressName .
-        ?buildingPart rdf:type transraz:BuildingPart ;
-                      rdfs:label ?addressName ;
-                      transraz:buildingpartComposedOf ?building .
-        ?building     rdf:type transraz:Building ;
-                      rdfs:label ?buildingName ;
-                      transraz:streetAddress ?street .
-        ?street rdfs:label "Friedenstraße". }
+    ?address rdfs:label ?addressName .
+    ?buildingPart rdf:type transraz:BuildingPart ;
+                  rdfs:label ?addressName ;
+                  transraz:buildingpartComposedOf ?building .
+    ?building   rdf:type transraz:Building ;
+                rdfs:label ?buildingName ;
+                transraz:streetAddress ?street .
+    ?street rdfs:label "Friedenstraße". }
 ORDER BY ?buildingName
         </code></pre>
     </div>
@@ -192,18 +192,18 @@ ORDER BY ?buildingName
     <div class="col-md-6">
         <pre><code>
 SELECT ?streetName (COUNT(?streetName) as ?frequency)
-    WHERE {
-        ?person dbo:profession ?occupation ;
-                transraz:address ?address.
-        ?occupation rdfs:label "Lehrer" . 
-        ?address rdfs:label ?addressName .
-        ?buildingPart rdf:type transraz:BuildingPart ;
-                      rdfs:label ?addressName ;
-                      transraz:buildingpartComposedOf ?building .
-        ?building rdf:type transraz:Building ;
-                  rdfs:label ?buildingName ;
-                  transraz:streetAddress ?street .
-        ?street rdfs:label ?streetName. }
+WHERE {
+    ?person dbo:profession ?occupation ;
+            transraz:address ?address.
+    ?occupation rdfs:label "Lehrer" . 
+    ?address rdfs:label ?addressName .
+    ?buildingPart rdf:type transraz:BuildingPart ;
+                  rdfs:label ?addressName ;
+                  transraz:buildingpartComposedOf ?building .
+    ?building rdf:type transraz:Building ;
+              rdfs:label ?buildingName ;
+              transraz:streetAddress ?street .
+    ?street rdfs:label ?streetName. }
 GROUP BY ?streetName
 ORDER BY DESC(?frequency)
         </code></pre>
@@ -222,15 +222,15 @@ ORDER BY DESC(?frequency)
     <div class="col-md-6">
         <pre><code>
 SELECT ?streetName (COUNT(?streetName) as ?frequency)
-    WHERE {
-        ?company transraz:branch ?branch ;
-                 transraz:address ?address .
-        ?branch rdfs:label "Bierbrauerei". 
-        ?address rdfs:label ?addressName .
-        ?building rdf:type transraz:Building ;
-                  rdfs:label ?addressName ;
-                  transraz:streetAddress ?street .
-        ?street rdfs:label ?streetName. }
+WHERE {
+    ?company transraz:branch ?branch ;
+             transraz:address ?address .
+    ?branch rdfs:label "Bierbrauerei". 
+    ?address rdfs:label ?addressName .
+    ?building rdf:type transraz:Building ;
+              rdfs:label ?addressName ;
+              transraz:streetAddress ?street .
+    ?street rdfs:label ?streetName. }
 GROUP BY ?streetName
 ORDER BY DESC(?frequency)
         </code></pre>
@@ -257,14 +257,14 @@ ORDER BY DESC(?frequency)
     <div class="col-md-6">
         <pre><code>
 SELECT ?personName  ?addressLabel ?timeLabel 
-    WHERE {
-        ?person rdfs:label "Georg Philipp Höfler" ;
-                rdfs:label ?personName .
-        ?activity cidoc:P14_carried_out_by ?person ;
-                transraz:associatedWithAddress ?address ;
-                transraz:time ?time .
-        ?time rdfs:label ?timeLabel .
-        ?address rdfs:label ?addressLabel .}
+WHERE {
+    ?person rdfs:label "Georg Philipp Höfler" ;
+            rdfs:label ?personName .
+    ?activity cidoc:P14_carried_out_by ?person ;
+              transraz:associatedWithAddress ?address ;
+              transraz:time ?time .
+    ?time rdfs:label ?timeLabel .
+    ?address rdfs:label ?addressLabel .}
         </code></pre>
     </div>
     </div>
@@ -281,17 +281,17 @@ SELECT ?personName  ?addressLabel ?timeLabel
     <div class="col-md-6">
         <pre><code>
 SELECT ?schoolLabel ?addressLabel ?foundingTimeLabel
-    WHERE {
-        ?school transraz:branch ?branch ;
-                rdfs:label ?schoolLabel .
-        ?branch rdfs:label "Schule" .
-        ?activity cidoc:P14_carried_out_by ?school ;
-               transraz:time ?time ;
-               transraz:associatedWithAddress ?address .
-        ?time rdfs:label "[1908]".
-        ?address rdfs:label ?addressLabel .
-        OPTIONAL  {?school transraz:foundingPeriod ?foundingTime .
-        ?foundingTime rdfs:label ?foundingTimeLabel .}}
+WHERE {
+    ?school transraz:branch ?branch ;
+            rdfs:label ?schoolLabel .
+    ?branch rdfs:label "Schule" .
+    ?activity cidoc:P14_carried_out_by ?school ;
+              transraz:time ?time ;
+              transraz:associatedWithAddress ?address .
+    ?time rdfs:label "[1908]".
+    ?address rdfs:label ?addressLabel .
+    OPTIONAL  {?school transraz:foundingPeriod ?foundingTime .
+    ?foundingTime rdfs:label ?foundingTimeLabel .}}
         </code></pre>
     </div>
     </div>
@@ -335,21 +335,21 @@ WHERE {
     <div class="col-md-6">
         <pre><code>
 SELECT ?streetName (COUNT(?streetName) as ?frequency)
-    WHERE {
-        ?person dbo:profession ?profession ;
-                transraz:address ?address .
-        ?address rdfs:label ?addressName .
-        ?buildingPart rdf:type transraz:BuildingPart ;
-                      rdfs:label ?addressName ;
-                      transraz:buildingpartComposedOf ?building .
-        ?building rdf:type transraz:Building ;
-                  rdfs:label ?buildingName ;
-                  transraz:streetAddress ?street .
-        ?street rdfs:label ?streetName.
-        ?profession rdfs:label ?profLabel .
-        FILTER regex( str(?profLabel), "[Aa]rchitekt|[Mm]aler|[Kk]unstler|[Aa]rtist|[Ss]tifter|[Mm]usik|[Ss]teinmeißel|[Bb]ildhauer|[Kk]unst|[Gg]ravier") }
-    GROUP BY ?streetName
-    ORDER BY DESC(?frequency)
+WHERE {
+    ?person dbo:profession ?profession ;
+            transraz:address ?address .
+    ?address rdfs:label ?addressName .
+    ?buildingPart rdf:type transraz:BuildingPart ;
+                  rdfs:label ?addressName ;
+                  transraz:buildingpartComposedOf ?building .
+    ?building rdf:type transraz:Building ;
+              rdfs:label ?buildingName ;
+              transraz:streetAddress ?street .
+    ?street rdfs:label ?streetName.
+    ?profession rdfs:label ?profLabel .
+    FILTER regex( str(?profLabel), "[Aa]rchitekt|[Mm]aler|[Kk]unstler|[Aa]rtist|[Ss]tifter|[Mm]usik|[Ss]teinmeißel|[Bb]ildhauer|[Kk]unst|[Gg]ravier") }
+GROUP BY ?streetName
+ORDER BY DESC(?frequency)
         </code></pre>
     </div>
     </div>
@@ -370,14 +370,14 @@ SELECT ?streetName (COUNT(?streetName) as ?frequency)
     <div class="col-md-6">
         <pre><code>
 SELECT DISTINCT ?documentLabel
-    WHERE {
-        ?street rdf:type dbo:Street  ;
-                rdfs:label ?streetLabel ;
-                rdfs:label "Friedenstraße" .
-        ?annotation oa:hasTarget ?page ;
+WHERE {
+    ?street rdf:type dbo:Street  ;
+            rdfs:label ?streetLabel ;
+            rdfs:label "Friedenstraße" .
+    ?annotation oa:hasTarget ?page ;
                 oa:hasBody ?street .
-        ?document frbr:part ?page ;
-                rdfs:label ?documentLabel . }
+    ?document frbr:part ?page ;
+              rdfs:label ?documentLabel . }
         </code></pre>
     </div>
     </div>
@@ -394,14 +394,14 @@ SELECT DISTINCT ?documentLabel
     <div class="col-md-6">
         <pre><code>
 SELECT DISTINCT ?streetLabel ?pageLabel ?coordinates
-    WHERE {
-        ?street rdf:type dbo:Street  ;
-                rdfs:label ?streetLabel ;
-                rdfs:label "Friedenstraße" .
-        ?annotation oa:hasTarget ?page ;
+WHERE {
+    ?street rdf:type dbo:Street  ;
+            rdfs:label ?streetLabel ;
+            rdfs:label "Friedenstraße" .
+    ?annotation oa:hasTarget ?page ;
                 oa:hasBody ?street ;
                 transraz:altoCoordinates ?coordinates.
-        ?page rdfs:label ?pageLabel . }
+    ?page rdfs:label ?pageLabel . }
         </code></pre>
     </div>
     </div>
@@ -419,15 +419,15 @@ SELECT DISTINCT ?streetLabel ?pageLabel ?coordinates
         <pre><code>
 SELECT DISTINCT ?documentType ?bookType
 WHERE {
-?street rdf:type dbo:Street  ;
-             rdfs:label ?streetLabel ;
-             rdfs:label "Friedenstraße" .
-?annotation oa:hasTarget ?page ;
-                     oa:hasBody ?street .
-?book frbr:part ?page ;
-                    rdf:type ?bookType .
-?document fabio:hasManifestation ?book ;
-                     rdf:type ?documentType .}
+    ?street rdf:type dbo:Street  ;
+            rdfs:label ?streetLabel ;
+            rdfs:label "Friedenstraße" .
+    ?annotation oa:hasTarget ?page ;
+                oa:hasBody ?street .
+    ?book frbr:part ?page ;
+          rdf:type ?bookType .
+    ?document fabio:hasManifestation ?book ;
+              rdf:type ?documentType . }
         </code></pre>
     </div>
     </div>
@@ -444,15 +444,15 @@ WHERE {
     <div class="col-md-6">
         <pre><code>
 SELECT DISTINCT ?streetLabel ?pageLabel ?annotationCreator ?date 
-    WHERE {
-        ?street rdf:type dbo:Street  ;
-                rdfs:label ?streetLabel ;
-                rdfs:label "Friedenstraße" .
-        ?annotation oa:hasTarget ?page ;
+WHERE {
+    ?street rdf:type dbo:Street  ;
+            rdfs:label ?streetLabel ;
+            rdfs:label "Friedenstraße" .
+    ?annotation oa:hasTarget ?page ;
                 oa:hasBody ?street ;
                 dcterms:creator ?annotationCreator ;
                 dcterms:created ?date .
-        ?page rdfs:label ?pageLabel . }
+    ?page rdfs:label ?pageLabel . }
         </code></pre>
     </div>
     </div>
