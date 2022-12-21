@@ -298,26 +298,26 @@ SELECT ?schoolLabel ?addressLabel ?foundingTimeLabel
 
 <div class="container">
 <h4 id="cat1">Category 4: Social and Cultural</h4>
-<p>Users with ancestors in Nuremberg have the possibility to explore, where their relatives lived, how they lived and what their neighborhood looked like. </p>
+<p class="lead">To learn about the social life of the historical city over the years, users are able to explore touristic and culturally important areas.</p>
     <div class="row">
     <div class="col-md-6">
         <p class="lead" align="justify"><strong>Query 1:</strong> 
-            What information is available for family or namesakes with last name 'Ruppert' living in the city? 
+            What were the main cultural areas in the city, e.g. cultural and art institutions?  
         <br> <br>
-            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E+%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E+%0D%0A%0D%0ASELECT+%3Fname+%3Fpredicate+%3FobjectL%0D%0AWHERE+%7B+%0D%0A%3Fperson+rdf%3Atype+dbo%3APerson+%3B%0D%0A+++++++++++++++foaf%3AfamilyName+%22Ruppert%22+%3B%0D%0A+++++++++++++++rdfs%3Alabel+%3Fname++%3B%0D%0A+++++++++++++++%3Fpredicate+%3Fobject+.%0D%0AOPTIONAL+%7B%3Fobject+rdfs%3Alabel+%3FobjectL%7D%0D%0AFILTER+isLiteral%28%3FobjectL%29%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
+            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0ASELECT+%3ForganisationLabel+%3FaddressLabel%0D%0AWHERE+%7B%0D%0A%3Forganisation+transraz%3Abranch+%3Fbranch+%3B%0D%0A++++++++++++++rdfs%3Alabel+%3ForganisationLabel+%3B%0D%0A++++++++++++++transraz%3Aaddress+%3Faddress+.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressLabel+.%0D%0A%3Fbranch+rdfs%3Alabel+%22Kunstanstalt%22.%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
         </p>
     </div>
 
     <div class="col-md-6">
         <pre><code>
-SELECT ?name ?predicate ?objectL
-WHERE { 
-    ?person rdf:type dbo:Person ;
-            foaf:familyName "Ruppert" ;
-            rdfs:label ?name  ;
-            ?predicate ?object .
-OPTIONAL {?object rdfs:label ?objectL}
-FILTER isLiteral(?objectL)}
+SELECT ?organisationLabel ?addressLabel
+WHERE {
+?organisation transraz:branch ?branch ;
+              rdfs:label ?organisationLabel ;
+              transraz:address ?address .
+?address rdfs:label ?addressLabel .
+?branch rdfs:label "Kunstanstalt".
+}
         </code></pre>
     </div>
     </div>
@@ -325,40 +325,37 @@ FILTER isLiteral(?objectL)}
     <div class="row">
     <div class="col-md-6">
         <p class="lead" align="justify"><strong>Query 2:</strong> 
-            Show all people who lived under address "Engelsgasse 17". If available, show more specific information about the addresses, e.g. floor. 
+            In which parts of the city did most artists live?
         <br> <br>
-            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E+%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E+%0D%0APREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0APREFIX+cidoc%3A+%3Chttp%3A%2F%2Fcidoc-crm.org%2Fcidoc-crm%2F7.1.2%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fname++%3FaddressName+%0D%0AWHERE+%7B+%0D%0A%3Factivity+transraz%3AassociatedWithAddress+%3Faddress+%3B%0D%0A++++++++++++++++cidoc%3AP14_carried_out_by+%3Fperson+%3B%0D%0A++++++++++++++++transraz%3Atime+%3Ftime+.%0D%0A%3Ftime+rdfs%3Alabel+%22%5B1908%5D%22+.%0D%0A%3Fperson+rdfs%3Alabel+%3Fname+.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressName+.%0D%0A%3FbuildingPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A+++++++++++++++++++++++rdfs%3Alabel+%3FaddressName+.+%0D%0A%0D%0AOPTIONAL+%7B%3FbuildingPart+transraz%3AbuildingpartComposedOf+%3FbuilPart+.%0D%0A%3FbuilPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A++++++++++++++++rdfs%3Alabel++%3FpartAddName+.%7D%0D%0A%0D%0A%7B%3FbuilPart+transraz%3AbuildingpartComposedOf+%3Fbuilding%7D+UNION+%7B%3FbuildingPart+transraz%3AbuildingpartComposedOf+%3Fbuilding%7D+.%0D%0A%3Fbuilding+rdf%3Atype+transraz%3ABuilding+%3B%0D%0A++++++++++++++++rdfs%3Alabel+%22Engelsgasse+17%22%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
+            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0A%0D%0ASELECT+%3FstreetName+%28COUNT%28%3FstreetName%29+as+%3Ffrequency%29%0D%0AWHERE+%7B%0D%0A%3Fperson+dbo%3Aprofession+%3Fprofession+%3B%0D%0A+++++++++++++++transraz%3Aaddress+%3Faddress+.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressName+.%0D%0A%3FbuildingPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A+++++++++++++++++++++++rdfs%3Alabel+%3FaddressName+%3B%0D%0A+++++++++++++++++++++++transraz%3AbuildingpartComposedOf+%3Fbuilding+.%0D%0A%3Fbuilding+rdf%3Atype+transraz%3ABuilding+%3B%0D%0A+++++++++++++++++rdfs%3Alabel+%3FbuildingName+%3B%0D%0A++++++++++++++++transraz%3AstreetAddress+%3Fstreet+.%0D%0A%3Fstreet+rdfs%3Alabel+%3FstreetName.%0D%0A%3Fprofession+rdfs%3Alabel+%3FprofLabel+.%0D%0AFILTER+regex%28+str%28%3FprofLabel%29%2C+%22%5BAa%5Drchitekt%7C%5BMm%5Daler%7C%5BKk%5Dunstler%7C%5BAa%5Drtist%7C%5BSs%5Dtifter%7C%5BMm%5Dusik%7C%5BSs%5Dteinmei%C3%9Fel%7C%5BBb%5Dildhauer%7C%5BKk%5Dunst%7C%5BGg%5Dravier%22%29%0D%0A%0D%0A%7D%0D%0AGROUP+BY+%3FstreetName%0D%0AORDER+BY+DESC%28%3Ffrequency%29&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
         </p>
     </div>
 
     <div class="col-md-6">
         <pre><code>
-SELECT DISTINCT ?name  ?addressName 
-WHERE { 
-    ?activity transraz:associatedWithAddress ?address ;
-        cidoc:P14_carried_out_by ?person ;
-        transraz:time ?time .
-    ?time rdfs:label "[1908]" .
-    ?person rdfs:label ?name .
-    ?address rdfs:label ?addressName .
-    ?buildingPart rdf:type transraz:BuildingPart ;
-        rdfs:label ?addressName . 
-
-OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
-           ?builPart rdf:type transraz:BuildingPart ;
-                rdfs:label  ?partAddName .}
-    {?builPart transraz:buildingpartComposedOf ?building} 
-    UNION 
-    {?buildingPart transraz:buildingpartComposedOf ?building} .
-    ?building rdf:type transraz:Building ;
-        rdfs:label "Engelsgasse 17"}
+SELECT ?streetName (COUNT(?streetName) as ?frequency)
+    WHERE {
+        ?person dbo:profession ?profession ;
+                transraz:address ?address .
+        ?address rdfs:label ?addressName .
+        ?buildingPart rdf:type transraz:BuildingPart ;
+                      rdfs:label ?addressName ;
+                      transraz:buildingpartComposedOf ?building .
+        ?building rdf:type transraz:Building ;
+                  rdfs:label ?buildingName ;
+                  transraz:streetAddress ?street .
+        ?street rdfs:label ?streetName.
+        ?profession rdfs:label ?profLabel .
+        FILTER regex( str(?profLabel), "[Aa]rchitekt|[Mm]aler|[Kk]unstler|[Aa]rtist|[Ss]tifter|[Mm]usik|[Ss]teinmeißel|[Bb]ildhauer|[Kk]unst|[Gg]ravier") }
+    GROUP BY ?streetName
+    ORDER BY DESC(?frequency)
         </code></pre>
     </div>
     </div>
 </div>
 
 <div class="container">
-<h4 id="cat1">Category 5: Historical Sources and Provinance</h4>
+<h4 id="cat1">Category 5: Historical Sources and Provenance</h4>
 <p>Users with ancestors in Nuremberg have the possibility to explore, where their relatives lived, how they lived and what their neighborhood looked like. </p>
     <div class="row">
     <div class="col-md-6">
