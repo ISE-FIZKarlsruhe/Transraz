@@ -15,11 +15,11 @@ layout: default
     <div class="row">
         <h3 class="header-light regular-pad">Querying the TRANSRAZ Knowledge Graph</h3>
         <p class="lead">
+        All Competency Questions and Queries can be found <a href="https://github.com/ISE-FIZKarlsruhe/Transraz/blob/main/TRANSRAZDataModel/CQs">here</a> <br> <br>
 
         Query NA-KG using the following prefixes:</p>
         
 <code>PREFIX transraz: &lt;http://toporaz.de/ontology/2022/11/owl/&gt; </code> <br>
-<code>PREFIX schema: &lt;http://schema.org/&gt; </code> <br>
 <code>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt; </code> <br>
 <code>PREFIX dbo: &lt;http://www.dbpedia.org/ontology/&gt; </code> <br>
 <code>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt; </code> <br>
@@ -27,6 +27,7 @@ layout: default
 
 <div class="container">
 <h4 id="cat1">Category 1: Ancestor Search</h4>
+<p>Users with ancestors in Nuremberg have the possibility to explore, where their relatives lived, how they lived and what their neighborhood looked like. </p>
     <div class="row">
     <div class="col-md-6">
         <p class="lead" align="justify"><strong>Query 1:</strong> 
@@ -82,27 +83,24 @@ OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
         rdfs:label "Engelsgasse 17"}
         </code></pre>
     </div>
+    </div>
+</div>
 
 
-
-
+<div class="container">
+<h4 id="cat1">Category 2: Wealth Distribution</h4>
+<p>Users with ancestors in Nuremberg have the possibility to explore, where their relatives lived, how they lived and what their neighborhood looked like. </p>
+    <div class="row">
+    <div class="col-md-6">
+        <p class="lead" align="justify"><strong>Query 1:</strong> 
+            Which properties and real estates belonged to a family or namesakes Pirner and how did they distribute throughout the city? 
+        <br> <br>
+            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E+%0D%0APREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0A%0D%0ASELECT+%3FownerName+%3FbuildingName+%0D%0AWHERE+%0D%0A%7B%0D%0A%3Fowner+dbo%3Aowner+%3Faddress+++%3B%0D%0A++++++++++++++rdfs%3Alabel+++%3FownerName+%3B%0D%0A++++++++++++++foaf%3AfamilyName+%22Pirner%22.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressName+.%0D%0A%3FbuildingPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A+++++++++++++++++++++++rdfs%3Alabel+%3FaddressName+%3B%0D%0A+++++++++++++++++++++++transraz%3AbuildingpartComposedOf+%3Fbuilding+.%0D%0A%3Fbuilding+rdf%3Atype+transraz%3ABuilding+%3B%0D%0A+++++++++++++++++rdfs%3Alabel+%3FbuildingName+%3B%0D%0A++++++++++++++++transraz%3AstreetAddress+%3Fstreet+.%0D%0A%3Fstreet+rdfs%3Alabel+%3FstreetName.%0D%0A%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
+        </p>
     </div>
 
-
-
-
-    
-</div>
-<h4>Category 2: Wealth Distribution</h4>
     <div class="col-md-6">
-        <p class="lead" align="justify"><strong>Query 1:</strong> Which properties and real estates belonged to a family or namesakes Pirner and how did they distribute throughout the city?
-        <br> <br>
-        <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E+%0D%0APREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0A%0D%0ASELECT+%3FownerName+%3FbuildingName+%0D%0AWHERE+%0D%0A%7B%0D%0A%3Fowner+dbo%3Aowner+%3Faddress+++%3B%0D%0A++++++++++++++rdfs%3Alabel+++%3FownerName+%3B%0D%0A++++++++++++++foaf%3AfamilyName+%22Pirner%22.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressName+.%0D%0A%3FbuildingPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A+++++++++++++++++++++++rdfs%3Alabel+%3FaddressName+%3B%0D%0A+++++++++++++++++++++++transraz%3AbuildingpartComposedOf+%3Fbuilding+.%0D%0A%3Fbuilding+rdf%3Atype+transraz%3ABuilding+%3B%0D%0A+++++++++++++++++rdfs%3Alabel+%3FbuildingName+%3B%0D%0A++++++++++++++++transraz%3AstreetAddress+%3Fstreet+.%0D%0A%3Fstreet+rdfs%3Alabel+%3FstreetName.%0D%0A%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
-        </p>
-        </div>
-
-        <div class="col-md-6">
-            <pre><code>
+        <pre><code>
 SELECT ?ownerName ?buildingName 
 WHERE {
     ?owner  dbo:owner ?address   ;
@@ -116,8 +114,50 @@ WHERE {
                 rdfs:label ?buildingName ;
                 transraz:streetAddress ?street .
     ?street rdfs:label ?streetName. }
-            </code></pre>
-        </div>
+        </code></pre>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6">
+        <p class="lead" align="justify"><strong>Query 2:</strong> 
+            Show all people who lived under address "Engelsgasse 17". If available, show more specific information about the addresses, e.g. floor. 
+        <br> <br>
+            <a class="btn btn-primary btn-md" href="https://www.toporaz.de/sparql?default-graph-uri=&query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E+%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E+%0D%0APREFIX+transraz%3A+%3Chttp%3A%2F%2Ftoporaz.de%2Fontology%2F2022%2F11%2Fowl%2F%3E%0D%0APREFIX+cidoc%3A+%3Chttp%3A%2F%2Fcidoc-crm.org%2Fcidoc-crm%2F7.1.2%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fname++%3FaddressName+%0D%0AWHERE+%7B+%0D%0A%3Factivity+transraz%3AassociatedWithAddress+%3Faddress+%3B%0D%0A++++++++++++++++cidoc%3AP14_carried_out_by+%3Fperson+%3B%0D%0A++++++++++++++++transraz%3Atime+%3Ftime+.%0D%0A%3Ftime+rdfs%3Alabel+%22%5B1908%5D%22+.%0D%0A%3Fperson+rdfs%3Alabel+%3Fname+.%0D%0A%3Faddress+rdfs%3Alabel+%3FaddressName+.%0D%0A%3FbuildingPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A+++++++++++++++++++++++rdfs%3Alabel+%3FaddressName+.+%0D%0A%0D%0AOPTIONAL+%7B%3FbuildingPart+transraz%3AbuildingpartComposedOf+%3FbuilPart+.%0D%0A%3FbuilPart+rdf%3Atype+transraz%3ABuildingPart+%3B%0D%0A++++++++++++++++rdfs%3Alabel++%3FpartAddName+.%7D%0D%0A%0D%0A%7B%3FbuilPart+transraz%3AbuildingpartComposedOf+%3Fbuilding%7D+UNION+%7B%3FbuildingPart+transraz%3AbuildingpartComposedOf+%3Fbuilding%7D+.%0D%0A%3Fbuilding+rdf%3Atype+transraz%3ABuilding+%3B%0D%0A++++++++++++++++rdfs%3Alabel+%22Engelsgasse+17%22%0D%0A%7D&format=text%2Fhtml&should-sponge=&timeout=0&signal_void=on" role="button">Show Query Result</a>
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <pre><code>
+SELECT DISTINCT ?name  ?addressName 
+WHERE { 
+    ?activity transraz:associatedWithAddress ?address ;
+        cidoc:P14_carried_out_by ?person ;
+        transraz:time ?time .
+    ?time rdfs:label "[1908]" .
+    ?person rdfs:label ?name .
+    ?address rdfs:label ?addressName .
+    ?buildingPart rdf:type transraz:BuildingPart ;
+        rdfs:label ?addressName . 
+
+OPTIONAL { ?buildingPart transraz:buildingpartComposedOf ?builPart .
+           ?builPart rdf:type transraz:BuildingPart ;
+                rdfs:label  ?partAddName .}
+    {?builPart transraz:buildingpartComposedOf ?building} 
+    UNION 
+    {?buildingPart transraz:buildingpartComposedOf ?building} .
+    ?building rdf:type transraz:Building ;
+        rdfs:label "Engelsgasse 17"}
+        </code></pre>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 
     <hr>
